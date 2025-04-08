@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flowbite Navbar</title>
+  <title>Navbar iBlog</title>
   <!-- Google Fonts - Kantumruy Pro for Khmer -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,14 +55,13 @@
   <header class="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-900 dark:border-gray-700 transition-colors duration-200">
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="assets/logoiBlog.png" class="h-12" alt="Flowbite Logo" />
+      <a href="https://github.com/kea-daron" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="http://localhost/clean-blog/assets/logo.png" class="h-[120px] w-[150px] mt-6" alt="iBlog Logo" />
     </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden items-center gap-6 md:flex">
         <a href="../clean-blog/index.php" class="nav-link active font-medium" data-translate="home">Home</a>
-        <a href="../posts/create.php" class="nav-link" data-translate="create">Create</a>
         <a href="../posts/aboutUs.php" class="nav-link" data-translate="aboutus">About Us</a>
       </nav>
 
@@ -127,8 +126,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
-        <a href="../clean-blog/auth/register.php"><button class="rounded-md font-semibold text-primary-50   px-4 py-1.5 bg-white px-4  text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-gray-900 dark:text-white dark:hover:bg-primary-50" data-translate="register">Register</button></a>
-        <a href="../clean-blog/auth/login.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="log-in">Log in</button></a>
+        <a href="http://localhost/clean-blog/auth/register.php"><button class="rounded-md font-semibold text-primary-50   px-4 py-1.5 bg-white px-4  text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-gray-900 dark:text-white dark:hover:bg-primary-50" data-translate="register">Register</button></a>
+        <a href="http://localhost/clean-blog/auth/login.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="log-in">Log in</button></a>
       </div>
         
       </div>

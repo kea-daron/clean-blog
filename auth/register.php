@@ -16,10 +16,10 @@
             
             <div class="w-full max-w-md"> 
                 <div class="flex items-center ">
-                    <img src="../assets/sidelogo.png" class="h-[70px] w-[70px] mb-3" alt="sidelogo">
-                    <h2 class="text-blue-900 font-bold text-4xl mx-3"><span class="text-red-500">i</span>Blog</h2>
+                    <a href="http://localhost/clean-blog/index.php"><img src="../assets/sidelogo.png" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
+                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-yellow-400">i</span>Blog</h2>
                 </div>
-                <p class="text-3xl text-black font-bold">Join as a Blog</p>
+                <p class="text-3xl text-blue-700 font-bold">Join as a Blog</p>
                 <p class="text-gray-600">Create your account to get started</p>
                 <?php require "../config/config.php"; ?>
                 <?php
@@ -45,18 +45,18 @@
                 <form method="POST" action="register.php" class="space-y-4 mt-5">
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700"> Your email</label>
-                        <input type="email" name="email" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your email" required>
+                        <input type="email" name="email" id="email" class="h-[50px] mt-1 block w-full p-2 border border-blue-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your email" required>
                     </div>
                     <div>
                         <label for="username" class="block text-sm font-medium text-gray-700">Your Username</label>
-                        <input type="text" name="username" id="username" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your username" required>
+                        <input type="text" name="username" id="username" class="h-[50px] mt-1 block w-full p-2 border border-blue-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your username" required>
                     </div>
                     <div>
                         <label for="password" class="block text-sm font-medium text-gray-700">Your password</label>
-                        <input type="password" name="password" id="password" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your password" required>
+                        <input type="password" name="password" id="password" class="h-[50px] mt-1 block w-full p-2 border border-blue-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your password" required>
                     </div>
                     <button type="submit" name="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-4 py-2">Create Account</button>
-                    <p class="text-gray-700 text-sm text-center">Already have an account? <a href="#" class="text-blue-600 font-semibold">Login now</a></p>
+                    <p class="text-gray-700 text-sm text-center">Already have an account? <a href="http://localhost/clean-blog/auth/login.php" class="text-blue-600 font-semibold">Login now</a></p>
                 </form>
             </div>
         </div>

@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flowbite Navbar</title>
+  <title>NavbarUer iBlog</title>
   <!-- Google Fonts - Kantumruy Pro for Khmer -->
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,16 +57,25 @@
   <header class="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-900 dark:border-gray-700 transition-colors duration-200">
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="assets/logoiBlog.png" class="h-12" alt="Flowbite Logo" />
+      <a href="http://localhost/clean-blog/index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="http://localhost/clean-blog/assets/logo.png" class="h-[120px] w-[150px] mt-6" alt="iBlog Logo" />
     </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden items-center gap-6 md:flex">
-        <a href="../clean-blog/index.php" class="nav-link active font-medium" data-translate="home">Home</a>
-        <a href="../clean-blog/posts/create.php" class="nav-link" data-translate="create">Create</a>
-        <a href="../clean-blog/posts/aboutUs.php" class="nav-link" data-translate="aboutus">About Us</a>
+        <a href="http://localhost/clean-blog/profileUser.php" class="text-primary-50 dark:text-primary-400 text-lg nav-link active font-medium" data-translate="home">Home</a>
+        <a href="http://localhost/clean-blog/posts/create.php" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white text-lg nav-link" data-translate="create">Create</a>
+        <a href="http://localhost/clean-blog/posts/aboutUs.php" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white text-lg nav-link" data-translate="aboutus">About Us</a>
       </nav>
+
+      <!-- <div class="flex flex-col gap-2 p-6">
+        <a href="/" class="text-primary-50 dark:text-primary-400 font-medium text-lg" data-translate="home">Home</a>
+        <a href="/create" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white text-lg" data-translate="create">Create</a>
+        <a href="/aboutus" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white text-lg" data-translate="aboutus">About Us</a>
+        <button class="mt-4 font-semibold rounded-md bg-white px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-black dark:text-white dark:hover:bg-primary-50" data-translate="register">Register</button>
+        <button class="mt-4 font-semibold rounded-md bg-primary-100 px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-black dark:text-white" data-translate="log-in">Log in</button>
+        
+      </div>  User Profile and Language Selector -->
 
       <div class="hidden items-center gap-4 md:flex">
       <div class="flex items-center space-x-4">
@@ -107,8 +117,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
-        <a href="../clean-blog/auth/profile.php"><button class="rounded-md font-semibold text-primary-50   px-4 py-1.5 bg-white px-4  text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-gray-900 dark:text-white dark:hover:bg-primary-50" data-translate="profile">Profile</button></a>
-        <a href="../clean-blog/auth/logout.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="log-out">Log out</button></a>
+        <a href="http://localhost/clean-blog/auth/profile.php"><button class="rounded-md font-semibold text-primary-50   px-4 py-1.5 bg-white px-4  text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-gray-900 dark:text-white dark:hover:bg-primary-50" data-translate="profile">Profile</button></a>
+        <a href="http://localhost/clean-blog/auth/logout.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="log-out">Log out</button></a>
 
         </li>
       </div>
@@ -200,18 +210,18 @@
         </button>
         </div>  
       </div>
-      <div class="flex flex-col gap-2 p-6">
+      <!-- <div class="flex flex-col gap-2 p-6">
         <a href="/" class="text-primary-50 dark:text-primary-400 font-medium text-lg" data-translate="home">Home</a>
         <a href="/create" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white text-lg" data-translate="create">Create</a>
         <a href="/aboutus" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white text-lg" data-translate="aboutus">About Us</a>
         <button class="mt-4 font-semibold rounded-md bg-white px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-black dark:text-white dark:hover:bg-primary-50" data-translate="register">Register</button>
         <button class="mt-4 font-semibold rounded-md bg-primary-100 px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-black dark:text-white" data-translate="log-in">Log in</button>
         
-      </div>
+      </div> -->
     </div>
   </header>
-<script src="js/languages.js"></script>
-<script src="js/dark.js"></script>
+<script src="http://localhost/clean-blog/js/languages.js"></script>
+<script src="http://localhost/clean-blog/js/dark.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 </html>
