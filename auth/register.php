@@ -16,8 +16,8 @@
             
             <div class="w-full max-w-md"> 
                 <div class="flex items-center ">
-                    <a href="http://localhost/clean-blog/index.php"><img src="../assets/sidelogo.png" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
-                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-yellow-400">i</span>Blog</h2>
+                    <a href="http://localhost/clean-blog/index.php"><img src="../assets/logoIB.jpg" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
+                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-red-600">i</span>Blog</h2>
                 </div>
                 <p class="text-3xl text-blue-700 font-bold">Join as a Blog</p>
                 <p class="text-gray-600">Create your account to get started</p>

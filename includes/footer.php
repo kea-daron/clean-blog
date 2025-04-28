@@ -43,42 +43,41 @@
 <body>
     
 
-<footer class="bg-white dark:bg-gray-900">
+<footer class="bg-blue-900 dark:bg-blue-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">  
               <a href="https://github.com/kea-daron" class="flex items-center">
-                  <img src="http://localhost/clean-blog/assets/logo.png" class="h-[190px] w-[200px]" alt="iBlog Logo"  />
-                  <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span> -->
+                  <img src="http://localhost/clean-blog/assets/2222.png" class="w-[300px]" alt="iBlog Logo"  />
               </a>
               
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white hover:text-primary-50 dark:hover:text-primary-50">Explore</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white hover:text-primary-50 dark:hover:text-primary-50">Explore</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="http://localhost/clean-blog/index.php" class="hover:underline hover:text-primary-50">Home</a>
+                          <a href="http://localhost/clean-blog/index.php" class="hover:underline hover:text-primary-50 text-white">Home</a>
                       </li>
                       <li>
-                          <a href="http://localhost/clean-blog/posts/aboutUs.php" class="hover:underline hover:text-primary-50">About us</a>
+                          <a href="http://localhost/clean-blog/posts/aboutUs.php" class="hover:underline hover:text-primary-50 text-white">About us</a>
                       </li>
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white hover:text-primary-50 dark:hover:text-primary-50">Follow us</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white hover:text-primary-50 dark:hover:text-primary-50">Follow us</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://github.com/kea-daron" class="hover:underline hover:text-primary-50 ">Github</a>
+                          <a href="https://github.com/kea-daron" class="hover:underline hover:text-primary-50 text-white">Github</a>
                       </li>
                       <li>
-                          <a href="https://www.facebook.com/share/18oXHR6M5b/?mibextid=wwXIfr" class="hover:underline hover:text-primary-50">Facebook</a>
+                          <a href="https://www.facebook.com/share/18oXHR6M5b/?mibextid=wwXIfr" class="hover:underline hover:text-primary-50 text-white">Facebook</a>
                       </li>
                   </ul>
               </div>
              
              <div>
-             <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white hover:text-primary-50 dark:hover:text-primary-50">Sponsors by</h2>
+             <h2 class="mb-4 text-sm font-semibold text-white uppercase dark:text-white hover:text-primary-50 dark:hover:text-primary-50">Sponsors by</h2>
              <ul>
                 <li class="mb-4">
                     <a href="https://www.rupp.edu.kh/">
@@ -92,21 +91,21 @@
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://github.com/kea-daron" class="hover:underline">iBlog™</a>. All Rights Reserved.
+          <span class="text-sm text-white sm:text-center dark:text-gray-400">© 2025 <a href="https://github.com/kea-daron" class="hover:underline text-white">iBlog™</a>. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0 gap-3 text-xl">
 
-              <a href="https://github.com/kea-daron" class="text-gray-500 hover:text-primary-50 dark:hover:text-primary-50">
+              <a href="https://github.com/kea-daron" class="text-white hover:text-primary-50 dark:hover:text-primary-50">
                   <i class="fa-brands fa-github"></i>
-                  <span class="sr-only">Facebook page</span>
+                  <span class="sr-only">Github page</span>
               </a>
-              <a href="https://www.facebook.com/share/18oXHR6M5b/?mibextid=wwXIfr" class="text-gray-500 hover:text-primary-50 dark:hover:text-primary-50">
+              <a href="https://www.facebook.com/share/18oXHR6M5b/?mibextid=wwXIfr" class="text-white hover:text-primary-50 dark:hover:text-primary-50">
                   <i class="fa-brands fa-facebook"></i>
                   <span class="sr-only">Facebook page</span>
               </a>
-              <a href="https://t.me/kea_daron" class="text-gray-500 hover:text-primary-50 dark:hover:text-primary-50 mb-5">
+              <a href="https://t.me/kea_daron" class="text-white hover:text-primary-50 dark:hover:text-primary-50 mb-5">
                   <i class="fa-brands fa-telegram"></i>
-                  <span class="sr-only">Discord community</span>
+                  <span class="sr-only">Telegram page</span>
               </a>
               
           </div>

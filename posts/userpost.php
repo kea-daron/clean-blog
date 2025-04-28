@@ -45,7 +45,6 @@
                     <div class="card-body ">
                         <p class="card-text"><?php echo $post->body; ?></p>
                         
-                        <!-- Post Tags if available -->
                         <?php if(isset($post->tags) && !empty($post->tags)): ?>
                         <div class="post-tags mt-4">
                             <h5>Tags:</h5>
@@ -57,11 +56,10 @@
                         </div>
                         <?php endif; ?>
                         
-                        <!-- Post Footer -->
                         <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
                             <div class="btn-group">
-                                <a href=""><button type="button" class="btn btn-sm btn-outline-secondary rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-gray-900 dark:text-white">Share</button></a>
-                                <a href=""><button type="button" class="btn btn-sm btn-outline-secondary rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-gray-900 dark:text-white">Comment</button></a>
+                                <a href="http://localhost/clean-blog/posts/update.php?upd_id=<?php echo $post->id; ?>"><button type="button" class="btn btn-sm btn-outline-secondary rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-gray-900 dark:text-white">Update</button></a>
+                                <a href="http://localhost/clean-blog/posts/delete.php?del_id=<?php echo $post->id; ?>"><button type="button" class="btn btn-sm btn-outline-secondary rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-gray-900 dark:text-white">Delete</button></a>
                             </div>
                             <small class="text-muted">
                                 <?php echo date('M d', strtotime($post->created_at)); ?>
