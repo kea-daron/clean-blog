@@ -40,7 +40,7 @@
                                 if(password_verify($password, $row['password'])){
                                     $_SESSION['username'] = $row['username'];
                                     $_SESSION['user_id'] = $row['id'];
-                                    header('location: http://localhost/clean-blog/profileUser.php');
+                                    header('location: http://localhost/clean-blog/pageUser.php');
                                 }
                             }
                         }

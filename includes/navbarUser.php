@@ -54,7 +54,7 @@
   </style>
 </head >
 <body class="bg-white dark:bg-gray-900 transition-colors duration-200">
-  <header class="sticky top-0 z-50 w-full border-b bg-blue-900 dark:bg-gray-900 dark:border-gray-700 transition-colors duration-200">
+  <header class="sticky top-0 z-50 w-full border-b bg-blue-900 dark:bg-blue-900 dark:border-gray-700 transition-colors duration-200">
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
       <a href="http://localhost/clean-blog/index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -63,9 +63,9 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden items-center gap-6 md:flex">
-        <a href="http://localhost/clean-blog/profileUser.php" class="nav-link text-white hover:text-yellow-500" data-translate="home">Home</a>
-        <a href="http://localhost/clean-blog/posts/create.php" class="nav-link text-white hover:text-yellow-500" data-translate="create">Create</a>
-        <a href="http://localhost/clean-blog/posts/aboutUs.php" class="nav-link text-white hover:text-yellow-500" data-translate="aboutus">About Us</a>
+        <a href="http://localhost/clean-blog/pageUser.php" class="nav-link text-white hover:text-yellow-500" data-translate="home">Home</a>
+        <a href="http://localhost/clean-blog/pages/create.php" class="nav-link text-white hover:text-yellow-500" data-translate="create">Create</a>
+        <a href="http://localhost/clean-blog/pages/aboutUs.php" class="nav-link text-white hover:text-yellow-500" data-translate="aboutus">About Us</a>
       </nav>
 
       <!-- <div class="flex flex-col gap-2 p-6">
@@ -117,8 +117,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
-        <a href="http://localhost/clean-blog/auth/profile.php"><button class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 px-4 text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:text-white dark:hover:bg-primary-50" data-translate="profile">Profile</button></a>
-        <a href="http://localhost/clean-blog/auth/logout.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-gray-900 dark:text-white" data-translate="log-out">Log out</button></a>
+        <a href="http://localhost/clean-blog/pages/userProfile.php?prof_id=<?php echo $_SESSION['user_id']; ?>"><button class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 px-4 text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:text-white dark:hover:bg-yellow-500" data-translate="profile">Profile</button></a>
+        <a href="http://localhost/clean-blog/auth/logout.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-blue-900 dark:text-white" data-translate="log-out">Log out</button></a>
 
         </li>
       </div>

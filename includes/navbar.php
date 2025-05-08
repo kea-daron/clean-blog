@@ -62,7 +62,7 @@
 
       <nav class="hidden items-center gap-6 md:flex">
         <a href="http://localhost/clean-blog/index.php" class="nav-link text-white hover:text-yellow-500" data-translate="home">Home</a>
-        <a href="http://localhost/clean-blog/posts/aboutUs.php" class="nav-link text-white hover:text-yellow-500" data-translate="aboutus">About Us</a>
+        <a href="http://localhost/clean-blog/pages/aboutUs.php" class="nav-link text-white hover:text-yellow-500" data-translate="aboutus">About Us</a>
       </nav>
 
       <div class="hidden items-center gap-4 md:flex">
@@ -104,8 +104,8 @@
             <path class="text-yellow-500" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
-        <a href="http://localhost/clean-blog/auth/register.php"><button class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 px-4 text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:text-white dark:hover:bg-primary-50" data-translate="register">Register</button></a>
-        <a href="http://localhost/clean-blog/auth/login.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-gray-900 dark:text-white" data-translate="log-in">Log in</button></a>
+        <a href="http://localhost/clean-blog/auth/register.php"><button class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 px-4 text-primary-50 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:text-white dark:hover:bg-yellow-500" data-translate="register">Register</button></a>
+        <a href="http://localhost/clean-blog/auth/login.php"><button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-blue-900 dark:text-white" data-translate="log-in">Log in</button></a>
       </div>
         
       </div>

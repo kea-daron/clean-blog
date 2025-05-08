@@ -9,6 +9,10 @@
         $select->execute();
         $rows = $select->fetch(PDO::FETCH_OBJ);
 
+        // if($_SESSION['user_id'] !== $rows->user_id){
+        //     echo "<script>window.location.href=http://localhost/clean-blog/pageUser.php</script>";
+        // }
+
         if(isset($_POST['submit'])){
             if($_POST['title'] == '' OR $_POST['subtitle'] == '' OR 
         $_POST['body'] == '') {
@@ -34,7 +38,7 @@
             ]);
 
             if(move_uploaded_file($_FILES['image']['tmp_name'], $dir)){
-                echo "<script>window.location.href=http://localhost/clean-blog/profileUser.php</script>";
+                echo "<script>window.location.href=http://localhost/clean-blog/pageUser.php</script>";
             }
             
         }

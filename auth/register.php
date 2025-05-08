@@ -14,8 +14,8 @@
         </div>
         <div class="md:w-1/2 p-6 flex items-center justify-center w-full h-full">
             
-            <div class="w-full max-w-md"> 
-                <div class="flex items-center ">
+            <div class="w-full max-w-md">
+                <div class="flex items-center">
                     <a href="http://localhost/clean-blog/index.php"><img src="../assets/logoIB.jpg" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
                     <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-red-600">i</span>Blog</h2>
                 </div>

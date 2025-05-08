@@ -4,26 +4,32 @@
 
 <?php
 
+    $categories = $conn->query("SELECT * FROM categories ");
+    $categories->execute();
+    $category = $categories->fetchAll(PDO::FETCH_OBJ);
+
     if(isset($_POST['submit'])){
         if($_POST['title'] == '' OR $_POST['subtitle'] == '' OR 
-        $_POST['body'] == '') {
+        $_POST['body'] == '' OR $_POST['category_id'] == '') {
             echo 'one or more inputs are empty';
         }else{
             $title = $_POST['title'];
             $subtitle = $_POST['subtitle'];
             $body = $_POST['body'];
+            $category_id = $_POST['category_id'];
             $image = $_FILES['image']['name'];
             $user_id = $_SESSION['user_id'];
             $user_name = $_SESSION['username'];
             
             $dir = './images/' . basename($image);
 
-            $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body, image, user_id, user_name)
-            VALUES (:title, :subtitle, :body, :image, :user_id, :user_name )");
+            $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body, category_id, image, user_id, user_name)
+            VALUES (:title, :subtitle, :body, :category_id, :image, :user_id, :user_name )");
             $insert->execute([
                 ':title' => $title,
                 ':subtitle' => $subtitle,
                 ':body' => $body,
+                ':category_id' => $category_id,
                 ':image' => $image,
                 ':user_id' => $user_id,
                 ':user_name' => $user_name,
@@ -57,6 +63,17 @@
                 <textarea type="text" name="body" id="email" rows="8" class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write an article..." required ></textarea>
             </div>
         </div>
+
+        <div class="mb-5">
+        <select name="category_id" class="block w-full px-4 py-2 text-black bg-white border border-blue-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer">
+            <option disabled selected>Select an option</option>
+            <?php foreach($category as $cat) : ?>
+            <option value="<?php echo $cat->id; ?>"><?php echo $cat->name; ?></option>
+            <?php endforeach; ?>
+        </select>
+        </div>
+
+
         </div>
             <label class="block mb-2 text-sm font-medium text-primary-50 dark:text-white text-primary-50" for="user_avatar">Upload file</label>
             <input name="image" class="block w-full text-sm text-primary-50 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help"  id="user_avatar" type="file" >
