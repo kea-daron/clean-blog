@@ -2,6 +2,7 @@
 <?php require "../config/config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,27 +16,27 @@
 
 <?php
 
-    if(isset($_GET['prof_id'])){
-        $id = $_GET['prof_id'];
-        $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
-        $select->execute();
-        $rows = $select->fetch(PDO::FETCH_OBJ);
+if (isset($_GET['prof_id'])) {
+    $id = $_GET['prof_id'];
+    $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
+    $select->execute();
+    $rows = $select->fetch(PDO::FETCH_OBJ);
 
-        if($_SESSION['user_id'] !== $rows->id){
-            echo "<script>window.location.href=http://localhost/clean-blog/pageUser.php</script>";
-        }
+    if ($_SESSION['user_id'] !== $rows->id) {
+        echo "<script>window.location.href=../pageUser.php</script>";
+    }
 
-        if(isset($_POST['submit'])){
-            if($_POST['email'] == '' OR $_POST['username'] == '') {
+    if (isset($_POST['submit'])) {
+        if ($_POST['email'] == '' or $_POST['username'] == '') {
             echo 'one or more inputs are empty';
-        }else{
+        } else {
 
-            
+
 
             $email = $_POST['email'];
             $username = $_POST['username'];
-            
-           
+
+
 
             $update = $conn->prepare("UPDATE users SET email = :email, username = :username
             WHERE id = '$id'");
@@ -44,16 +45,14 @@
                 ':username' => $username,
             ]);
 
-            header('Location: http://localhost/clean-blog/profileUser.php?prof_id='.$_SESSION['user_id'].'');
-            
+            header('Location: ../profileUser.php?prof_id=' . $_SESSION['user_id'] . '');
         }
-        
     }
-    }
+}
 
 ?>
 
-<form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>" >
+<form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>">
     <div class="max-w-lg mx-auto ">
         <div class="mb-7">
             <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">Title</label>
@@ -89,10 +88,10 @@
                         </p>
                     </div>
                 </div>
-                <a href="http://localhost/clean-blog/pages/editProfileUser.php"><button class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-red-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <i data-lucide="edit-2" class="h-4 w-4 mr-2 text-red-500"></i>
-                    Edit Profile
-                </button></a>
+                <a href="../pages/editProfileUser.php"><button class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-red-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <i data-lucide="edit-2" class="h-4 w-4 mr-2 text-red-500"></i>
+                        Edit Profile
+                    </button></a>
             </div>
             <div class="border-t border-gray-200">
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -100,7 +99,7 @@
                         Bio
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    My name is Kea Daran. I was born in Dambang Village, Kirivong District, Takeo Province. I am currently a 4th-year student at the Royal University of Phnom Penh (RUPP) and working as a Fullstack Developer. I have a strong passion for writing code and constantly enjoy exploring new technologies.
+                        My name is Kea Daran. I was born in Dambang Village, Kirivong District, Takeo Province. I am currently a 4th-year student at the Royal University of Phnom Penh (RUPP) and working as a Fullstack Developer. I have a strong passion for writing code and constantly enjoy exploring new technologies.
                     </dd>
                 </div>
                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -182,7 +181,7 @@
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s" alt="">
                                 <div class="ml-4">
                                     <div class="text-sm font-medium text-indigo-600">
-                                    The Future of Remote Work
+                                        The Future of Remote Work
                                     </div>
                                     <div class="text-sm text-gray-500">
                                         Updated 2 days ago
@@ -205,7 +204,7 @@
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XEWvyObeMa70CJxSbM-Uku9WoNMGF0wxprkupywonkBr7UylJTLiDczs_V2sg3L6idQ&usqp=CAU" alt="">
                                 <div class="ml-4">
                                     <div class="text-sm font-medium text-indigo-600">
-                                    The Rise of Remote Work
+                                        The Rise of Remote Work
                                     </div>
                                     <div class="text-sm text-gray-500">
                                         Updated 1 week ago
@@ -217,7 +216,7 @@
                                     Dashboard
                                 </span> -->
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                Poster
+                                    Poster
                                 </span>
                             </div>
                         </div>
@@ -228,7 +227,7 @@
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKguOF_MKgv44H_8KJRkLatwY8i_J_oSz428VOEjAdg3kig2wbmQaIucMZEDI5OGJU76U&usqp=CAU" alt="">
                                 <div class="ml-4">
                                     <div class="text-sm font-medium text-indigo-600">
-                                    Artificial Intelligence in Everyday Life
+                                        Artificial Intelligence in Everyday Life
                                     </div>
                                     <div class="text-sm text-gray-500">
                                         Updated 3 weeks ago
@@ -240,7 +239,7 @@
                                     UI Design
                                 </span> -->
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                Poster
+                                    Poster
                                 </span>
                             </div>
                         </div>
@@ -323,4 +322,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

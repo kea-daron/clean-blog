@@ -1,6 +1,7 @@
 <?php require "../includes/navbarUser.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,27 +18,27 @@
 
 <?php
 
-    if(isset($_GET['prof_id'])){
-        $id = $_GET['prof_id'];
-        $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
-        $select->execute();
-        $rows = $select->fetch(PDO::FETCH_OBJ);
+if (isset($_GET['prof_id'])) {
+    $id = $_GET['prof_id'];
+    $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
+    $select->execute();
+    $rows = $select->fetch(PDO::FETCH_OBJ);
 
-        if($_SESSION['user_id'] !== $rows->id){
-            echo "<script>window.location.href=http://localhost/clean-blog/pageUser.php</script>";
-        }
+    if ($_SESSION['user_id'] !== $rows->id) {
+        echo "<script>window.location.href=../pageUser.php</script>";
+    }
 
-        if(isset($_POST['submit'])){
-            if($_POST['email'] == '' OR $_POST['username'] == '') {
+    if (isset($_POST['submit'])) {
+        if ($_POST['email'] == '' or $_POST['username'] == '') {
             echo 'one or more inputs are empty';
-        }else{
+        } else {
 
-            
+
 
             $email = $_POST['email'];
             $username = $_POST['username'];
-            
-           
+
+
 
             $update = $conn->prepare("UPDATE users SET email = :email, username = :username
             WHERE id = '$id'");
@@ -46,16 +47,14 @@
                 ':username' => $username,
             ]);
 
-            header('Location: http://localhost/clean-blog/profileUser.php?prof_id='.$_SESSION['user_id'].'');
-            
+            header('Location: ../profileUser.php ?prof_id=' . $_SESSION['user_id'] . '');
         }
-        
     }
-    }
+}
 
 ?>
 
-<form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>" >
+<form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>">
     <div class="max-w-lg mx-auto ">
         <div class="mb-7">
             <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">Title</label>
@@ -75,7 +74,7 @@
 
 
 <body class="bg-gray-100 min-h-screen">
-    
+
 
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <!-- Page header -->
@@ -86,7 +85,7 @@
                 </h2>
             </div>
             <div class="mt-4 flex md:mt-0 md:ml-4">
-                <a href="http://localhost/clean-blog/pages/userProfile.php" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-blue-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <a href="../pages/userProfile.php" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-blue-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     <i data-lucide="arrow-left" class="h-4 w-4 mr-2 text-blue-900"></i>
                     Back to Profile
                 </a>
@@ -233,7 +232,7 @@
                                 </label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
                                     <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                                    https://twitter.com/kea-daron
+                                        https://twitter.com/kea-daron
                                     </span>
                                     <input type="text" name="twitter" id="twitter" value="daronkea" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300 p-2 border">
                                 </div>
@@ -245,7 +244,7 @@
                                 </label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
                                     <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                                    https://linkedin.com/in/kea-daron
+                                        https://linkedin.com/in/kea-daron
                                     </span>
                                     <input type="text" name="linkedin" id="linkedin" value="daronkea" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300 p-2 border">
                                 </div>
@@ -257,7 +256,7 @@
                                 </label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
                                     <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                                    https://github.com/kea-daron
+                                        https://github.com/kea-daron
                                     </span>
                                     <input type="text" name="github" id="github" value="daronkea" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300 p-2 border">
                                 </div>
@@ -269,7 +268,7 @@
                                 </label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
                                     <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                                    https://dribbble.com/kea-daron
+                                        https://dribbble.com/kea-daron
                                     </span>
                                     <input type="text" name="dribbble" id="dribbble" value="daronkea" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300 p-2 border">
                                 </div>
@@ -298,4 +297,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

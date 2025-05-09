@@ -2,5 +2,4 @@
 session_start();
 session_unset();
 session_destroy();
-header('location: http://localhost/clean-blog/index.php');
-?>
+header('location: ../index.php');

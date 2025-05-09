@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,11 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+
         body {
             background-color: #f9fafb;
         }
-        
+
         /* .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -24,7 +25,7 @@
             flex-direction: column;
             align-items: center;
         } */
-        
+
         h2 {
             font-size: 36px;
             font-weight: bold;
@@ -32,13 +33,13 @@
             margin-bottom: 64px;
             color: #1e3a8a;
         }
-        
+
         .mentors-grid {
             display: flex;
             justify-content: center;
             width: 100%;
         }
-        
+
         .mentor-card {
             background-color: white;
             border-radius: 8px;
@@ -51,12 +52,12 @@
             max-width: 380px;
             width: 100%;
         }
-        
+
         .mentor-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         .mentor-image {
             width: 100%;
             height: 240px;
@@ -64,24 +65,24 @@
             border-radius: 4px;
             margin-bottom: 16px;
         }
-        
+
         .mentor-title {
             color: #6b7280;
             font-size: 14px;
             margin-bottom: 4px;
         }
-        
+
         .mentor-name {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 16px;
         }
-        
+
         .social-links {
             display: flex;
             gap: 12px;
         }
-        
+
         .social-icon {
             width: 32px;
             height: 32px;
@@ -92,11 +93,11 @@
             border-radius: 50%;
             transition: all 0.3s ease;
         }
-        
+
         .social-icon:hover {
             background-color: #e5e7eb;
         }
-        
+
         .corner-decoration {
             position: absolute;
             bottom: 0;
@@ -105,23 +106,24 @@
             height: 60px;
             border-radius: 0 0 8px 0;
         }
-        
+
         .blue-corner {
             background-color: #1E3A8A;
         }
-        
+
         .orange-corner {
             background-color: #f59e0b;
         }
     </style>
 </head>
+
 <body>
     <section class="container">
         <h2 class="mt-[90px] mb-[100px] dark:text-white">Our Mentor</h2>
-        
+
         <div class="mentors-grid">
             <div class="mentor-card">
-                <img src="http://localhost/clean-blog/assets/cher.png" alt="Meas Sovann" class="mentor-image" style="object-position: 25% center;">
+                <img src="../../assets/cher.png" alt="Meas Sovann" class="mentor-image" style="object-position: 25% center;">
                 <p class="mentor-title">Mentor</p>
                 <h3 class="mentor-name">Meas Sovann</h3>
                 <div class="social-links">
@@ -139,4 +141,5 @@
         </div>
     </section>
 </body>
+
 </html>

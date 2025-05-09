@@ -3,28 +3,28 @@
 
 <?php
 
-    if(isset($_GET['cat_id'])){
-        $id = $_GET['cat_id'];
-        $posts = $conn->query("SELECT posts.id AS id, posts.title AS title, posts.subtitle AS subtitle, 
+if (isset($_GET['cat_id'])) {
+    $id = $_GET['cat_id'];
+    $posts = $conn->query("SELECT posts.id AS id, posts.title AS title, posts.subtitle AS subtitle, 
         posts.user_name AS user_name, posts.created_at AS created_at, 
         posts.category_id AS category_id FROM categories 
         JOIN posts ON categories.id = posts.category_id 
         WHERE posts.category_id = '$id'");
-        $posts->execute();
-        $rows = $posts->fetchAll(PDO::FETCH_OBJ);
-    }else{
-        echo "404";
-    }
-    
+    $posts->execute();
+    $rows = $posts->fetchAll(PDO::FETCH_OBJ);
+} else {
+    echo "404";
+}
+
 
 ?>
 
-    <section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
-        <h2 class="mb-[100px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center">All Posts</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <?php foreach($rows as $row): ?>
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
-                    <a href="http://localhost/clean-blog/pages/post.php?post_id=<?php echo $row->id; ?>" class="block p-6">
+<section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
+    <h2 class="mb-[100px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center">All Posts</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <?php foreach ($rows as $row): ?>
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
+                <a href="../pages/post.php?post_id=<?php echo $row->id; ?>" class="block p-6">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
                         <?php echo htmlspecialchars($row->title); ?>
                     </h2>
@@ -32,17 +32,17 @@
                         <?php echo htmlspecialchars($row->subtitle); ?>
                     </h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Posted by 
+                        Posted by
                         <span class="text-primary-500 font-semibold">
-                        <?php echo htmlspecialchars($row->user_name); ?>
-                        </span> 
-                        on 
+                            <?php echo htmlspecialchars($row->user_name); ?>
+                        </span>
+                        on
                         <?php echo date('M d, Y', strtotime($row->created_at)); ?>
                     </p>
-                    </a>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
+                </a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 
 <?php require "../includes/footer.php"; ?>
