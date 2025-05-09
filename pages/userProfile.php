@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
@@ -30,21 +30,8 @@
             echo 'one or more inputs are empty';
         }else{
 
-            
-
             $email = $_POST['email'];
             $username = $_POST['username'];
-            
-           
-
-            $update = $conn->prepare("UPDATE users SET email = :email, username = :username
-            WHERE id = '$id'");
-            $update->execute([
-                ':email' => $email,
-                ':username' => $username,
-            ]);
-
-            header('Location: http://localhost/clean-blog/profileUser.php?prof_id='.$_SESSION['user_id'].'');
             
         }
         
@@ -54,19 +41,8 @@
 ?>
 
 <form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>" >
-    <div class="max-w-lg mx-auto ">
-        <div class="mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">Title</label>
-            <input type="email" name="email" value="<?php echo $rows->email; ?>" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="email" required>
-        </div>
-        <div class="mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">SubTitle</label>
-            <input type="text" name="username" value="<?php echo $rows->username; ?>" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="username" required>
-        </div>
-        <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
-        <button type="submit" name="submit" class="mt-4 font-semibold rounded-md bg-primary-100 px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-black dark:text-white" data-translate="update">Update</button>
-    </div>
-</form>
+            
+            
 
 
 <body class="bg-whitesmoke dark:bg-black min-h-screen">
@@ -79,20 +55,25 @@
                     <img class="h-24 w-24 rounded-full mr-4" src="../assets/ron.jpg" alt="Profile picture">
                     <div>
                         <h3 class="text-2xl leading-6 font-bold text-blue-900">
-                            Daron Kea
+                        <input type="text" name="username" value="<?php echo $rows->username; ?>" id="email" placeholder="username" required>
                         </h3>
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                            @daron3327 • FullStack Developer
+                        <input type="email" name="email" value="<?php echo $rows->email; ?>" id="email" placeholder="email" required>
+                        <br>• FullStack Developer
                         </p>
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">
                             <i data-lucide="map-pin" class="inline h-4 w-4 mr-1"></i> Combodia, Phnom Penh
                         </p>
                     </div>
                 </div>
-                <a href="http://localhost/clean-blog/pages/editProfileUser.php"><button class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-red-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <!-- <a href="http://localhost/clean-blog/pages/editProfileUser.php"><button class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-red-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     <i data-lucide="edit-2" class="h-4 w-4 mr-2 text-red-500"></i>
                     Edit Profile
-                </button></a>
+                </button></a> -->
+                <a href="http://localhost/clean-blog/pages/editProfileUser.php">
+                    <i data-lucide="edit-2" class="h-4 w-4 mr-2 text-red-500"></i>
+                    Edit Profile
+                </a>
             </div>
             <div class="border-t border-gray-200">
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -108,7 +89,7 @@
                         Email address
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        daron.kea@gmail.com
+                    <input type="email" name="email" value="<?php echo $rows->email; ?>" id="email" placeholder="email" required>
                     </dd>
                 </div>
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -323,4 +304,5 @@
         lucide.createIcons();
     </script>
 </body>
+</form>
 </html>

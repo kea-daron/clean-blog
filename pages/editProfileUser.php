@@ -1,4 +1,5 @@
 <?php require "../includes/navbarUser.php"; ?>
+<?php require "../config/config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
