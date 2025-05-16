@@ -82,7 +82,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
   <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-[100px] mx-6 md:mx-[120px] min-w-80 mt-[70px]">
     <div>
       <h2 class="text-5xl font-bold text-yellow-500 dark:text-yellow-500">iBlog</h2>
-      <p class="text-5xl font-bold text-primary-50 dark:text-primary-50">Make Your Blog Better</p>
+      <p class="text-5xl font-bold text-primary-50 dark:text-primary-50" data-translate="b">Make Your Blog Better</p>
       <p class="mt-5 lead text-2xl" style="
               font-family: 
                 sans-serif;
@@ -105,18 +105,26 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
         <?php
         renderCard('<i class="fa-solid fa-feather"></i>', "Ceate Blog", "Built using modern web technologies, it supports dynamic content management and can serve as a personal journal, tech blog, lifestyle site, or portfolio.", "✨");
         renderCard('<i class="fa-solid fa-users"></i>', "Ceate Categories", "Categories help structure content, making it easier for readers to navigate and discover related posts.", "✨");
-        renderCard("🔥", "Welcome", "This is your dashboard", "✨");
+        renderCard('<i class="fa-solid fa-repeat"></i>', "Connection", "iBlog is a platform that connects writers and readers.", "✨");
         ?>
       </div>
     </div>
   </section>
 
   <section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
-    <h2 class="mb-[100px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center">All Posts</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <?php foreach ($rows as $row): ?>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
-          <a href="./pages/post.php?post_id=<?php echo $row->id; ?>" class="block p-6">
+  <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center">All Posts</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <?php foreach ($rows as $row): ?>
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
+        <a href="./pages/post.php?post_id=<?php echo $row->id; ?>" class="block">
+          <?php if (!empty($row->image)): ?>
+            <img src="./pages/images/<?php echo htmlspecialchars($row->image); ?>" alt="Post image" class="w-full h-48 object-cover">
+          <?php else: ?>
+            <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
+              No Image
+            </div>
+          <?php endif; ?>
+          <div class="p-6">
             <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
               <?php echo htmlspecialchars($row->title); ?>
             </h2>
@@ -131,13 +139,15 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
               on
               <?php echo date('M d, Y', strtotime($row->created_at)); ?>
             </p>
-          </a>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </section>
-  <section class="my-10 px-6 py-8 bg-gradient-to-br from-blue-900 to-gray-100 shadow-lg transition-transform hover:scale-[1.02]">
-    <h3 class="text-4xl font-bold text-white mb-[10px] text-center">Categories</h3>
+          </div>
+        </a>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
+
+  <section class="px-6 py-8 bg-gradient-to-br from-blue-900 to-gray-100 shadow-lg transition-transform hover:scale-[1.02]">
+    <h3 class="text-4xl font-bold text-white mb-[50px] text-center mt-5">Categories</h3>
     <?php foreach ($category as $cat) : ?>
       <div class="max-w-3xl mx-auto text-center mb-[50px]">
         <a href="./categories/category.php?cat_id=<?php echo $cat->id; ?>">

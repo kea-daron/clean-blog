@@ -2,17 +2,16 @@
 <?php require "../config/config.php"; ?>
 
 <?php
-
 $categories = $conn->query("SELECT * FROM categories ");
 $categories->execute();
 $category = $categories->fetchAll(PDO::FETCH_OBJ);
 
 if (isset($_POST['submit'])) {
     if (
-        $_POST['title'] == '' or $_POST['subtitle'] == '' or
-        $_POST['body'] == '' or $_POST['category_id'] == ''
+        $_POST['title'] == '' || $_POST['subtitle'] == '' ||
+        $_POST['body'] == '' || $_POST['category_id'] == ''
     ) {
-        echo 'one or more inputs are empty';
+        echo '<div class="text-red-600 font-semibold text-center mt-4">⚠️ All fields are required.</div>';
     } else {
         $title = $_POST['title'];
         $subtitle = $_POST['subtitle'];
@@ -35,51 +34,102 @@ if (isset($_POST['submit'])) {
             ':user_id' => $user_id,
             ':user_name' => $user_name,
         ]);
+
         if (move_uploaded_file($_FILES['image']['tmp_name'], $dir)) {
-            echo "<script>window.location.href=../profileUser.php </script>";
-            // header('Location: http://localhost/clean-blog/profileUser.php');
+            echo "<script>window.location.href='../profileUser.php'</script>";
         } else {
-            echo "File upload failed.";
+            echo '<div class="text-red-500 text-center mt-4">Image upload failed. Try again.</div>';
         }
     }
 }
-
 ?>
-<form method="POST" action="create.php" enctype="multipart/form-data" class="mt-10">
-    <div class="max-w-lg mx-auto ">
-        <div class="mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">Title</label>
-            <input type="text" name="title" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="title" required>
-        </div>
-        <div class="mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">SubTitle</label>
-            <input type="text" name="subtitle" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="subtitle" required>
-        </div>
-        <div class="form-outline mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50 mb-2">Description</label>
-            <div class="w-full mb-4 border border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-lg">
-                <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                    <label for="editor" class="sr-only">Publish post</label>
-                    <textarea type="text" name="body" id="email" rows="8" class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write an article..." required></textarea>
-                </div>
-            </div>
 
-            <div class="mb-5">
-                <select name="category_id" class="block w-full px-4 py-2 text-black bg-white border border-blue-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer">
-                    <option disabled selected>Select an option</option>
-                    <?php foreach ($category as $cat) : ?>
-                        <option value="<?php echo $cat->id; ?>"><?php echo $cat->name; ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
+<!-- Form UI -->
+<section class="relative py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://d2r4787i3zn8dn.cloudfront.net/site_images/images/79fc06f676773547f5ae99ed5042ad3d1cf27081.jpg?1511795330v');">
+  
+  <!-- Background overlay for better readability -->
+  <div class="absolute inset-0 bg-black/30 z-0"></div>
 
+  <!-- Glass-style container -->
+  <div class="relative z-10 max-w-4xl mx-auto bg-white/30 backdrop-blur-lg shadow-2xl rounded-2xl p-10 border border-white/40">
+    
+    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-t-3xl"></div>
 
+    <h2 class="text-4xl font-extrabold text-center text-blue-900 dark:text-white mb-10 tracking-tight">
+      ✍️ Create a New Blog Post
+    </h2>
+
+    <form method="POST" action="create.php" enctype="multipart/form-data" class="space-y-8">
+
+      <!-- Title -->
+      <div>
+        <label for="title" class="block mb-2 text-sm font-medium text-blue-900 dark:text-gray-300">Post Title</label>
+        <input type="text" name="title" id="title" required
+          class="w-full p-4 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-800 dark:text-white dark:border-gray-600 transition-all duration-300"
+          placeholder="Amazing Title Here">
+      </div>
+
+      <!-- Subtitle -->
+      <div>
+        <label for="subtitle" class="block mb-2 text-sm font-medium text-blue-900 dark:text-gray-300">Subtitle</label>
+        <input type="text" name="subtitle" id="subtitle" required
+          class="w-full p-4 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-800 dark:text-white dark:border-gray-600 transition-all duration-300"
+          placeholder="Something catchy...">
+      </div>
+
+      <!-- Body -->
+      <div>
+        <label for="body" class="block mb-2 text-sm font-medium text-blue-900 dark:text-gray-300">Content</label>
+        <textarea name="body" id="body" rows="6" required
+          class="w-full p-4 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:bg-gray-800 dark:text-white dark:border-gray-600 transition-all duration-300"
+          placeholder="Share your thoughts..."></textarea>
+      </div>
+
+      <!-- Category -->
+      <div>
+        <label for="category_id" class="block mb-2 text-sm font-medium text-blue-900 dark:text-gray-300">Category</label>
+        <select name="category_id" id="category_id" required
+          class="w-full p-4 text-base border border-gray-300 rounded-xl bg-white dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300">
+          <option disabled selected>Select category</option>
+          <?php foreach ($category as $cat): ?>
+            <option value="<?php echo $cat->id; ?>"><?php echo $cat->name; ?></option>
+          <?php endforeach; ?>
+        </select>
+      </div>
+
+      <!-- Image Upload -->
+      <div>
+        <label for="user_avatar" class="block mb-2 text-sm font-medium text-blue-900 dark:text-gray-300">Upload Featured Image</label>
+        <input type="file" name="image" id="user_avatar" accept="image/*"
+          class="w-full p-3 text-base border border-gray-300 rounded-xl bg-white dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300">
+        <div class="mt-2">
+          <img id="imagePreview" class="hidden mt-4 w-48 h-auto rounded-lg border-2 border-gray-300 dark:border-gray-600" />
         </div>
-        <label class="block mb-2 text-sm font-medium text-primary-50 dark:text-white text-primary-50" for="user_avatar">Upload file</label>
-        <input name="image" class="block w-full text-sm text-primary-50 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
-        <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
-        <button type="submit" name="submit" class="mt-4 font-semibold rounded-md bg-primary-100 px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-black dark:text-white" data-translate="create">Create</button>
-    </div>
-</form>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center pt-4">
+        <button type="submit" name="submit"
+          class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-lg">
+          🚀 Publish Post
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- JavaScript for Image Preview -->
+<script>
+  const fileInput = document.getElementById('user_avatar');
+  const preview = document.getElementById('imagePreview');
+
+  fileInput.addEventListener('change', (event) => {
+    const [file] = event.target.files;
+    if (file) {
+      preview.src = URL.createObjectURL(file);
+      preview.classList.remove('hidden');
+    }
+  });
+</script>
 
 <?php require "../includes/footer.php"; ?>

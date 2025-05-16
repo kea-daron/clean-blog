@@ -123,7 +123,7 @@
 
         <div class="mentors-grid">
             <div class="mentor-card">
-                <img src="../../assets/cher.png" alt="Meas Sovann" class="mentor-image" style="object-position: 25% center;">
+                <img src="../assets/cher.png" alt="Meas Sovann" class="mentor-image" style="object-position: 25% center;">
                 <p class="mentor-title">Mentor</p>
                 <h3 class="mentor-name">Meas Sovann</h3>
                 <div class="social-links">

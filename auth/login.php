@@ -9,8 +9,8 @@
     <title>Login</title>
 </head>
 
-<body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full h-screen">
-    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full h-full">
+<body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full">
+    <div class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden w-full h-full">
         <div class="md:w-1/2 p-6 flex items-center justify-center">
             <img src="../assets/login.svg" class="w-full max-w-sm" alt="Register">
         </div>
@@ -19,12 +19,13 @@
             <div class="w-full max-w-md">
                 <div class="flex items-center ">
                     <a href="../index.php"><img src="../assets/logoIB.jpg" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
-                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-red-600">i</span>Blog</h2>
+                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-red-500">i</span>Blog</h2>
                 </div>
                 <p class="text-3xl text-blue-700 font-bold">Welcome Back</p>
                 <p class="text-gray-600">Log in to your account</p>
                 <?php require "../config/config.php"; ?>
                 <?php
+              
                 if (isset($_POST['submit'])) {
                     if ($_POST['email'] == '' or $_POST['password'] == '') {
                         echo "one input or more are empty";
@@ -43,7 +44,15 @@
                                 $_SESSION['username'] = $row['username'];
                                 $_SESSION['user_id'] = $row['id'];
                                 header('location: ../pageUser.php');
-                            }
+                            }else {
+                            echo "<div class='bg-red-200 text-white rounded-lg py-4 mt-5'>
+                                        <p class='mx-5 font-bold'>The email or password is wrong!!!</p>
+                                  </div>";
+                        }
+                        }else {
+                            echo "<div class='bg-red-200 text-white rounded-lg py-4 mt-5'>
+                                        <p class='mx-5 font-bold'>The email or password is wrong!!!</p>
+                                  </div>";
                         }
                     }
                 }
@@ -54,6 +63,7 @@
                         <label for="email" class="block text-sm font-medium text-gray-700"> Your email</label>
                         <input type="email" name="email" id="email" class="h-[50px] mt-1 block w-full p-2 border border-blue-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 " placeholder="Enter your email" required>
                     </div>
+
 
                     <div>
                         <label for="password" class="block text-sm font-medium text-gray-700">Your password</label>

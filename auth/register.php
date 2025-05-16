@@ -9,7 +9,7 @@
     <title>Register</title>
 </head>
 
-<body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full h-screen">
+<body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full ">
     <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full h-full">
         <div class="md:w-1/2 p-6 flex items-center justify-center">
             <img src="../assets/register.svg" class="w-full max-w-sm" alt="Register">
@@ -19,7 +19,7 @@
             <div class="w-full max-w-md">
                 <div class="flex items-center">
                     <a href="../index.php"><img src="../assets/logoIB.jpg" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
-                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-red-600">i</span>Blog</h2>
+                    <h2 class="text-blue-700 font-bold text-4xl mx-3"><span class="text-red-500">i</span>Blog</h2>
                 </div>
                 <p class="text-3xl text-blue-700 font-bold">Join as a Blog</p>
                 <p class="text-gray-600">Create your account to get started</p>

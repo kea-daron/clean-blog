@@ -16,40 +16,39 @@
 
 <?php
 
-if (isset($_GET['prof_id'])) {
-    $id = $_GET['prof_id'];
-    $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
-    $select->execute();
-    $rows = $select->fetch(PDO::FETCH_OBJ);
+    if (isset($_GET['prof_id'])) {
+        $id = $_GET['prof_id'];
+        $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
+        $select->execute();
+        $rows = $select->fetch(PDO::FETCH_OBJ);
 
-    if ($_SESSION['user_id'] !== $rows->id) {
-        echo "<script>window.location.href=../pageUser.php</script>";
-    }
+        if ($_SESSION['user_id'] !== $rows->id) {
+            echo "<script>window.location.href=../pageUser.php</script>";
+        }
 
-    if (isset($_POST['submit'])) {
-        if ($_POST['email'] == '' or $_POST['username'] == '') {
-            echo 'one or more inputs are empty';
-        } else {
+        if (isset($_POST['submit'])) {
+            if ($_POST['email'] == '' or $_POST['username'] == '') {
+                echo 'one or more inputs are empty';
+            } else {
 
-
-            $email = $_POST['email'];
-            $username = $_POST['username'];
-            
+                $email = $_POST['email'];
+                $username = $_POST['username'];
+                
+            }
         }
     }
-}
 
 ?>
 
+
+            
+            
+
 <form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>" >
-            
-            
-
-
 <body class="bg-whitesmoke dark:bg-black min-h-screen">
 
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <!-- Profile header -->
+
         <div class="bg-white shadow overflow-hidden sm:rounded-lg mb-6">
             <div class="px-4 py-5 sm:px-6 flex justify-between items-center">
                 <div class="flex items-center">
@@ -67,14 +66,12 @@ if (isset($_GET['prof_id'])) {
                         </p>
                     </div>
                 </div>
-                <!-- <a href="./pages/editProfileUser.php"><button class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-red-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <i data-lucide="edit-2" class="h-4 w-4 mr-2 text-red-500"></i>
-                    Edit Profile
-                </button></a> -->
-                <a href="./pages/editProfileUser.php">
+                
+                <a href="../pages/editProfileUser.php" style="display: inline-flex; align-items: center;">
                     <i data-lucide="edit-2" class="h-4 w-4 mr-2 text-red-500"></i>
                     Edit Profile
                 </a>
+
             </div>
             <div class="border-t border-gray-200">
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -112,7 +109,7 @@ if (isset($_GET['prof_id'])) {
             </div>
         </div>
 
-        <!-- Stats -->
+
         <div class="grid grid-cols-1 gap-5 sm:grid-cols-3 mb-6">
             <div class="bg-white overflow-hidden shadow rounded-lg">
                 <div class="px-4 py-5 sm:p-6">
@@ -146,7 +143,7 @@ if (isset($_GET['prof_id'])) {
             </div>
         </div>
 
-        <!-- Recent Projects -->
+
         <div class="bg-white shadow overflow-hidden sm:rounded-lg mb-6">
             <div class="px-4 py-5 sm:px-6">
                 <h3 class="text-lg leading-6 font-medium text-blue-900">
@@ -172,9 +169,7 @@ if (isset($_GET['prof_id'])) {
                                 </div>
                             </div>
                             <div class="flex space-x-2">
-                                <!-- <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                    UI Design
-                                </span> -->
+                               
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                                     Poster
                                 </span>
@@ -195,9 +190,7 @@ if (isset($_GET['prof_id'])) {
                                 </div>
                             </div>
                             <div class="flex space-x-2">
-                                <!-- <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                                    Dashboard
-                                </span> -->
+                               
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
                                     Poster
                                 </span>
@@ -218,9 +211,7 @@ if (isset($_GET['prof_id'])) {
                                 </div>
                             </div>
                             <div class="flex space-x-2">
-                                <!-- <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                    UI Design
-                                </span> -->
+                                
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
                                     Poster
                                 </span>
@@ -231,7 +222,7 @@ if (isset($_GET['prof_id'])) {
             </div>
         </div>
 
-        <!-- Activity Feed -->
+
         <div class="bg-white shadow overflow-hidden sm:rounded-lg">
             <div class="px-4 py-5 sm:px-6">
                 <h3 class="text-lg leading-6 font-medium text-blue-900">
@@ -301,9 +292,10 @@ if (isset($_GET['prof_id'])) {
     <?php require "../includes/footer.php"; ?>
 
     <script>
-        // Initialize Lucide icons
+        
         lucide.createIcons();
     </script>
+    
 </body>
 </form>
 </html>

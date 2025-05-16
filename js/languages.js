@@ -15,6 +15,8 @@ const translations = {
     // welcome: "welcome",
     a: 
       "A good blog platform provides customization options, SEO tools, and the ability to monetize content",
+    b:
+      "Make Your Blog Better",
   },
   km: {
     home: "ទំព័រដើម",
@@ -31,6 +33,8 @@ const translations = {
     // welcome: "សូមស្វាគមន៍"
     a: 
       "វេទិកាប្លក់ដ៏ល្អផ្តល់នូវជម្រើសប្ដូរតាមបំណង ឧបករណ៍ SEO និងសមត្ថភាពក្នុងការរកប្រាក់ពីមាតិកា។",
+    b:
+     "ធ្វើឱ្យប្លុករបស់អ្នកកាន់តែប្រសើរឡើង",
   },
 };
 

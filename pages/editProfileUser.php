@@ -7,78 +7,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-
-
-
-
-<?php
-
-if (isset($_GET['prof_id'])) {
-    $id = $_GET['prof_id'];
-    $select = $conn->query("SELECT * FROM users WHERE id = '$id'");
-    $select->execute();
-    $rows = $select->fetch(PDO::FETCH_OBJ);
-
-    if ($_SESSION['user_id'] !== $rows->id) {
-        echo "<script>window.location.href=../pageUser.php</script>";
-    }
-
-    if (isset($_POST['submit'])) {
-        if ($_POST['email'] == '' or $_POST['username'] == '') {
-            echo 'one or more inputs are empty';
-        } else {
-
-
-
-            $email = $_POST['email'];
-            $username = $_POST['username'];
-
-
-
-            $update = $conn->prepare("UPDATE users SET email = :email, username = :username
-            WHERE id = '$id'");
-            $update->execute([
-                ':email' => $email,
-                ':username' => $username,
-            ]);
-
-            header('Location: ../profileUser.php ?prof_id=' . $_SESSION['user_id'] . '');
-        }
-    }
-}
-
-?>
-
-<form method="POST" action="userProfile.php?prof_id=<?php echo $rows->id; ?>">
-    <div class="max-w-lg mx-auto ">
-        <div class="mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">Title</label>
-            <input type="email" name="email" value="<?php echo $rows->email; ?>" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="email" required>
-        </div>
-        <div class="mb-7">
-            <label for="title" class="block text-sm font-medium text-gray-700 text-primary-50">SubTitle</label>
-            <input type="text" name="username" value="<?php echo $rows->username; ?>" id="email" class="h-[50px] mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="username" required>
-        </div>
-        <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
-        <button type="submit" name="submit" class="mt-4 font-semibold rounded-md bg-primary-100 px-4 py-2 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-black dark:text-white" data-translate="update">Update</button>
-    </div>
-</form>
-
-
-
 
 
 <body class="bg-gray-100 min-h-screen">
 
 
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <!-- Page header -->
+
         <div class="md:flex md:items-center md:justify-between mb-6">
             <div class="flex-1 min-w-0">
                 <h2 class="text-2xl font-bold leading-7 text-blue-900 sm:text-3xl sm:truncate">
@@ -87,17 +28,17 @@ if (isset($_GET['prof_id'])) {
             </div>
             <div class="mt-4 flex md:mt-0 md:ml-4">
                 <a href="../pages/userProfile.php" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-blue-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <i data-lucide="arrow-left" class="h-4 w-4 mr-2 text-blue-900"></i>
+                    <i data-lucide="arrow-left" class="h-4 w-4 mr-2 text-blue-900" ></i>
                     Back to Profile
                 </a>
             </div>
         </div>
 
-        <!-- Edit Profile Form -->
+
         <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-            <form action="# " method="POST">
+            <form action="userProfile.php" method="POST">
                 <div class="px-4 py-5 sm:p-6">
-                    <!-- Profile Photo -->
+
                     <div class="mb-8">
                         <label class="block text-sm font-medium text-blue-900 mb-2">
                             Profile Photo
@@ -124,7 +65,7 @@ if (isset($_GET['prof_id'])) {
                         </div>
                     </div>
 
-                    <!-- Basic Information -->
+
                     <div class="mb-8">
                         <h3 class="text-lg font-medium leading-6 text-blue-900 mb-4">Basic Information</h3>
                         <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -190,7 +131,7 @@ if (isset($_GET['prof_id'])) {
                         </div>
                     </div>
 
-                    <!-- Contact Information -->
+
                     <div class="mb-8">
                         <h3 class="text-lg font-medium leading-6 text-blue-900 mb-4">Contact Information</h3>
                         <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -223,7 +164,7 @@ if (isset($_GET['prof_id'])) {
                         </div>
                     </div>
 
-                    <!-- Social Media -->
+
                     <div>
                         <h3 class="text-lg font-medium leading-6 text-blue-900 mb-4">Social Media</h3>
                         <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -278,7 +219,7 @@ if (isset($_GET['prof_id'])) {
                     </div>
                 </div>
 
-                <!-- Form Actions -->
+
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                     <button type="button" class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-3">
                         Cancel
@@ -294,7 +235,7 @@ if (isset($_GET['prof_id'])) {
     <?php require "../includes/footer.php"; ?>
 
     <script>
-        // Initialize Lucide icons
+
         lucide.createIcons();
     </script>
 </body>

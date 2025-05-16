@@ -50,7 +50,7 @@
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="https://github.com/kea-daron" class="flex items-center">
-                        <img src="../assets/2222.png" class="w-[300px]" alt="iBlog Logo" />
+                        <img src="./assets/2222.png" class="w-[300px]" alt="iBlog Logo" />
                     </a>
 
                 </div>
