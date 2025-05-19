@@ -5,7 +5,7 @@ FROM php:8.2-apache
 RUN a2enmod rewrite
 
 # Install PHP MySQL extension
-RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install pdo_pgql
 
 # Set the working directory
 WORKDIR /var/www/html
