@@ -1,197 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Purpose</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        body {
-            background-color: #f9fafb;
-        }
-        
-        /* .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 64px 16px;
-        } */
-        
-        h2 {
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 64px;
-        }
-        
-        .cards-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-           
-        }
-        
-        @media (min-width: 768px) {
-            .cards-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        .card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            border-color: #e0e7ff;
-            background-color: #fafbff;
-        }
-        
-        .card:hover h3 {
-            color: #3b82f6;
-        }
-        
-        .card:hover .hexagon {
-            border-color: #3b82f6;
-            background-color: #f0f7ff;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 32px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            
-        }
-        
-        .icon-container {
-            position: absolute;
-            top: -40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .icon-wrapper {
-            background-color: white;
-            padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .icon-inner {
-            background-color: white;
-            padding: 12px;
-            border-radius: 8px;
-        }
-        
-        .hexagon-container {
-            width: 70px;
-            height: 70px;
-            position: relative;
-        }
-        
-        .hexagon {
-            width: 100%;
-            height: 100%;
-            background: white;
-            position: relative;
-            border: 1px solid #e5e7eb;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .icon {
-            width: 32px;
-            height: 32px;
-            fill: #3b82f6;
-        }
-        
-        h3 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 32px;
-            margin-bottom: 16px;
-        }
-        
-        p {
-            color: #4b5563;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Purpose</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <section class="container">
-        <h2 class="mb-[150px] mt-[90px] dark:text-white">Our Purpose</h2>
-        
-        <div class="cards-grid">
-            <!-- Vision Card -->
-            <div class="card">
-                <div class="icon-container">
-                    <div class="icon-wrapper">
-                        <div class="icon-inner">
-                            <div class="hexagon-container">
-                                <div class="hexagon">
-                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="mt-[90px]">Write and Post Blogs</h3>
-                <p>Users can easily create and publish blog content.</p>
-            </div>
-            
-            <!-- Mission Card -->
-            <div class="card">
-                <div class="icon-container">
-                    <div class="icon-wrapper">
-                        <div class="icon-inner">
-                            <div class="hexagon-container">
-                                <div class="hexagon">
-                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="mt-[90px]">Clean Interface</h3>
-                <p>A simple, user-friendly design for better reading and writing.</p>
-            </div>
-            
-            <!-- Core Values Card -->
-            <div class="card">
-                <div class="icon-container">
-                    <div class="icon-wrapper">
-                        <div class="icon-inner">
-                            <div class="hexagon-container">
-                                <div class="hexagon">
-                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="mt-[90px]">Manage Content</h3>
-                <p>Users can edit, delete, and organize their blog posts.</p>
-            </div>
+<body class="bg-blue-900 text-gray-800">
+  <div class="bg-blue-900 py-16">
+    <section class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-white tracking-tight">Our Purpose</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div class="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-yellow-500 hover:ring-2 hover:ring-yellow-300 text-center overflow-hidden">
+          <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-10 bg-gradient-to-br from-blue-400 to-purple-500 transition-opacity duration-500"></div>
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-blue-100 rounded-full group-hover:bg-blue-200 transition duration-300">
+            <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-900">Write and Post Blogs</h3>
+          <p class="text-gray-600">Users can easily create and publish engaging blog content with minimal effort.</p>
         </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-yellow-500 hover:ring-2 hover:ring-yellow-300 text-center overflow-hidden">
+          <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-10 bg-gradient-to-br from-blue-400 to-purple-500 transition-opacity duration-500"></div>
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-blue-100 rounded-full group-hover:bg-blue-200 transition duration-300">
+            <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-900">Clean Interface</h3>
+          <p class="text-gray-600">A simple and distraction-free design ensures better readability and writing focus.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-yellow-500 hover:ring-2 hover:ring-yellow-300 text-center overflow-hidden">
+          <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-10 bg-gradient-to-br from-blue-400 to-purple-500 transition-opacity duration-500"></div>
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-blue-100 rounded-full group-hover:bg-blue-200 transition duration-300">
+            <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-900">Manage Content</h3>
+          <p class="text-gray-600">Users can update, delete, and organize posts for full content control.</p>
+        </div>
+      </div>
     </section>
+  </div>
 </body>
 </html>

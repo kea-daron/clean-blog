@@ -19,6 +19,10 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
 <link rel="stylesheet" href="./css/style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
 <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script>
   tailwind.config = {
@@ -69,6 +73,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
       </div>
       <p
         class="text-center mt-2"
+        data-aos="fade-down"
         style="
               font-family: 
                 sans-serif;
@@ -80,7 +85,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
     </div>
   </section>
   <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-[100px] mx-6 md:mx-[120px] min-w-80 mt-[70px]">
-    <div>
+    <div data-aos="fade-right">
       <h2 class="text-5xl font-bold text-yellow-500 dark:text-yellow-500">iBlog</h2>
       <p class="text-5xl font-bold text-primary-50 dark:text-primary-50" data-translate="b">Make Your Blog Better</p>
       <p class="mt-5 lead text-2xl" style="
@@ -90,7 +95,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
         Our blog is your go-to space for insightful content</p>
       <button class="mt-5 rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="Explore">Explore Us</button>
     </div>
-    <div>
+    <div data-aos="fade-left">
       <img src="./assets/writing.svg" class="h-[500px] w-[500px]" alt="image writing">
     </div>
   </section>
@@ -98,10 +103,10 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
   <section class="p-5 mt-5 bg-blue-900 my-6">
     <div class="mx-6 md:mx-[120px] my-6">
       <div class="m-7">
-        <h2 class="text-4xl text-white font-bold">For iBlog Services</h2>
-        <p class="mt-5 text-white text-2xl">Explore job opportunities.</p>
+        <h2 class="text-4xl text-white font-bold" data-aos="fade-down">For iBlog Services</h2>
+        <p class="mt-5 text-white text-2xl" data-aos="fade-left">Explore job opportunities.</p>
       </div>
-      <div class="app my-4">
+      <div class="app my-4" data-aos="fade-right">
         <?php
         renderCard('<i class="fa-solid fa-feather"></i>', "Ceate Blog", "Built using modern web technologies, it supports dynamic content management and can serve as a personal journal, tech blog, lifestyle site, or portfolio.", "✨");
         renderCard('<i class="fa-solid fa-users"></i>', "Ceate Categories", "Categories help structure content, making it easier for readers to navigate and discover related posts.", "✨");
@@ -111,9 +116,9 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
     </div>
   </section>
 
-  <section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
-  <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center">All Posts</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
+  <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center" data-aos="fade-down">All Posts</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-right">
     <?php foreach ($rows as $row): ?>
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
         <a href="./pages/post.php?post_id=<?php echo $row->id; ?>" class="block">
@@ -146,10 +151,10 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
   </div>
 </section>
 
-  <section class="px-6 py-8 bg-gradient-to-br from-blue-900 to-gray-100 shadow-lg transition-transform hover:scale-[1.02]">
-    <h3 class="text-4xl font-bold text-white mb-[50px] text-center mt-5">Categories</h3>
+  <section class="px-6 py-8 bg-gradient-to-br from-blue-900 to-gray-100 shadow-lg transition-transform hover:scale-[1.02]" >
+    <h3 class="text-4xl font-bold text-white mb-[50px] text-center mt-5" data-aos="fade-down">Categories</h3>
     <?php foreach ($category as $cat) : ?>
-      <div class="max-w-3xl mx-auto text-center mb-[50px]">
+      <div class="max-w-3xl mx-auto text-center mb-[50px]" data-aos="fade-left">
         <a href="./categories/category.php?cat_id=<?php echo $cat->id; ?>">
           <div class="bg-blue-900 text-white text-xl font-semibold rounded-lg py-4 mb-6">
             <?php echo $cat->name; ?>

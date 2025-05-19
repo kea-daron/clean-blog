@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full ">
-    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full h-full">
+    <div class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden w-full h-full">
         <div class="md:w-1/2 p-6 flex items-center justify-center">
             <img src="../assets/register.svg" class="w-full max-w-sm" alt="Register">
         </div>

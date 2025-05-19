@@ -144,22 +144,22 @@
 <body>
     <section class="team-section">
         <div class="container">
-            <h1 class="section-title mb-[150px] mt-[60px] dark:text-white">Our Team</h1>
+            <h1 class="section-title mb-[150px]  dark:text-white">Our Team</h1>
 
             <div class="team-grid mt-[100px]">
                 <?php
                 // Team members data
                 $teamMembers = [
-                    [
-                        'name' => 'Kea Daron',
-                        'role' => 'Lead Web (Leader)',
-                        'image' => '../assets/ron.jpg',
-                        'telegram' => 'https://t.me/kea_daron',
-                        'facebook' => 'https://www.facebook.com/share/18oXHR6M5b/?mibextid=wwXIfr',
-                        'github' => 'https://github.com/kea-daron',
-                        'accent' => 'blue',
-                        'accent' => 'orange'
-                    ],
+                    // [
+                    //     'name' => 'Kea Daron',
+                    //     'role' => 'Lead Web (Leader)',
+                    //     'image' => '../assets/ron.jpg',
+                    //     'telegram' => 'https://t.me/kea_daron',
+                    //     'facebook' => 'https://www.facebook.com/share/18oXHR6M5b/?mibextid=wwXIfr',
+                    //     'github' => 'https://github.com/kea-daron',
+                    //     'accent' => 'blue',
+                    //     'accent' => 'orange'
+                    // ],
                     [
                         'name' => 'Chhun Meyling',
                         'role' => 'Lead Web',

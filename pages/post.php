@@ -63,8 +63,8 @@
                         <!-- Footer Buttons -->
                         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mt-4 pt-3 border-top gap-2">
                             <div class="btn-group">
-                                <a href="#"><button class="btn btn-sm btn-outline-secondary">Share</button></a>
-                                <a href="#"><button class="btn btn-sm btn-outline-secondary">Comment</button></a>
+                                <a href="#"><button class="mt-4 font-semibold rounded-md bg-blue-900 text-white px-4 py-2 border border-primary-100 hover:bg-primary-100 dark:bg-black dark:hover:bg-yellow-500" data-translate="share">Share</button></a>
+                                <a href="#"><button class="mt-4 font-semibold rounded-md bg-blue-900 text-white px-4 py-2 border border-primary-100 hover:bg-primary-100 dark:bg-black dark:hover:bg-yellow-500" data-translate="comment">Comment</button></a>
                             </div>
                             <small class="text-muted"><?php echo date('M d, Y', strtotime($post->created_at)); ?></small>
                         </div>
