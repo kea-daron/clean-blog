@@ -1,27 +1,19 @@
-    <?php
+<?php
 
-    try {
-        // host
-        $host = "127.0.0.1";
+try {
+    $host = "dpg-d0l9r88gjchc73et7s4g-a.oregon-postgres.render.com";
+    $port = "5432";
+    $dbname = "darom";
+    $user = "darom_user";
+    $pass = "gwhJ7RnFXOAeL8XYq8Fw0SuxR4l5mBkE";
 
-        //dbname
-        $dbname = "cleanblog";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
 
-        //user
-        $user = "root";
+    $conn = new PDO($dsn, $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        //pass
-        $pass = "";
-
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
-
-    // if($conn == true) {
-    //     echo "conn work fine";
-    // } else {
-    //     echo "conn error";
-    // }
-    ?>
+    // echo "Connection successful!";   
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+?>

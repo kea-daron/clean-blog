@@ -1,8 +1,15 @@
-<?php require "../includes/navbarUser.php"; ?>
-<?php require "../config/config.php"; ?>
-
 <?php
-$categories = $conn->query("SELECT * FROM categories ");
+session_start(); 
+
+require "../includes/navbarUser.php";
+require "../config/config.php";
+
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['username'])) {
+    echo '<div class="text-red-600 font-semibold text-center mt-4">⚠️ You must be logged in to create a post.</div>';
+    exit();
+}
+
+$categories = $conn->query("SELECT * FROM categories");
 $categories->execute();
 $category = $categories->fetchAll(PDO::FETCH_OBJ);
 
@@ -18,13 +25,15 @@ if (isset($_POST['submit'])) {
         $body = $_POST['body'];
         $category_id = $_POST['category_id'];
         $image = $_FILES['image']['name'];
+
         $user_id = $_SESSION['user_id'];
         $user_name = $_SESSION['username'];
 
         $dir = './images/' . basename($image);
 
         $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body, category_id, image, user_id, user_name)
-            VALUES (:title, :subtitle, :body, :category_id, :image, :user_id, :user_name )");
+            VALUES (:title, :subtitle, :body, :category_id, :image, :user_id, :user_name)");
+        
         $insert->execute([
             ':title' => $title,
             ':subtitle' => $subtitle,
@@ -36,13 +45,14 @@ if (isset($_POST['submit'])) {
         ]);
 
         if (move_uploaded_file($_FILES['image']['tmp_name'], $dir)) {
-            echo "<script>window.location.href='../profileUser.php'</script>";
+            echo "<script>window.location.href='/pageUser.php'</script>";
         } else {
             echo '<div class="text-red-500 text-center mt-4">Image upload failed. Try again.</div>';
         }
     }
 }
 ?>
+
 
 <!-- Form UI -->
 <section class="relative py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://d2r4787i3zn8dn.cloudfront.net/site_images/images/79fc06f676773547f5ae99ed5042ad3d1cf27081.jpg?1511795330v');">
