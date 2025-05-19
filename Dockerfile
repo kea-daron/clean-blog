@@ -4,8 +4,11 @@ FROM php:8.2-apache
 # Enable mod_rewrite (required for clean URLs)
 RUN a2enmod rewrite
 
-# Install PHP MySQL extension
-RUN docker-php-ext-install pdo_pgql
+# Install required system packages for PostgreSQL PDO
+RUN apt-get update && apt-get install -y libpq-dev
+
+# Install extensions: pdo_pgsql (PostgreSQL) instead of MySQL
+RUN docker-php-ext-install pdo pdo_pgsql
 
 # Set the working directory
 WORKDIR /var/www/html
