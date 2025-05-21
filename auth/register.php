@@ -1,21 +1,44 @@
+<?php
+require "../config/config.php";
+
+if (isset($_POST['submit'])) {
+    if (empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password'])) {
+        $error = "Error, all fields are required!";
+    } else {
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        $insert = $conn->prepare("INSERT INTO users (email, username, password) VALUES (:email, :username, :password)");
+        $insert->execute([
+            ':email' => $email,
+            ':username' => $username,
+            ':password' => $password
+        ]);
+
+        header("Location: login.php");
+        exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Register</title>
 </head>
 
-<body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full ">
+<body class="bg-whitesmoke flex items-center justify-center min-h-screen w-full">
     <div class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden w-full h-full">
         <div class="md:w-1/2 p-6 flex items-center justify-center">
             <img src="../assets/register.svg" class="w-full max-w-sm" alt="Register">
         </div>
         <div class="md:w-1/2 p-6 flex items-center justify-center w-full h-full">
-
             <div class="w-full max-w-md">
                 <div class="flex items-center">
                     <a href="../index.php"><img src="../assets/logoIB.jpg" class="h-[70px] w-[70px] mb-3" alt="sidelogo"></a>
@@ -23,31 +46,14 @@
                 </div>
                 <p class="text-3xl text-blue-700 font-bold">Join as a Blog</p>
                 <p class="text-gray-600">Create your account to get started</p>
-                <?php require "../config/config.php"; ?>
-                <?php
-                if (isset($_POST['submit'])) {
-                    if (empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password'])) {
-                        echo "<p class='text-red-500 text-sm'>Error, all fields are required!</p>";
-                    } else {
-                        $email = $_POST['email'];
-                        $username = $_POST['username'];
-                        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                        $insert = $conn->prepare("INSERT INTO users (email, username, password) VALUES (:email, :username, :password)");
-                        $insert->execute([
-                            ':email' => $email,
-                            ':username' => $username,
-                            ':password' => $password
-                        ]);
-                        header("location: login.php");
-                        exit; 
-                    }
-                }
-                ?>
+                <?php if (isset($error)): ?>
+                    <p class="text-red-500 text-sm mt-2"><?= htmlspecialchars($error) ?></p>
+                <?php endif; ?>
 
                 <form method="POST" action="register.php" class="space-y-4 mt-5">
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700"> Your email</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Your email</label>
                         <input type="email" name="email" id="email" class="h-[50px] mt-1 block w-full p-2 border border-blue-500 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="your email" required>
                     </div>
                     <div>
