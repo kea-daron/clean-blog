@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require "../includes/navbarUser.php"; ?>
 <?php require "../config/config.php"; ?>
 

@@ -45,6 +45,7 @@
                                 $_SESSION['username'] = $row['username'];
                                 $_SESSION['user_id'] = $row['id'];
                                 header('location: ../pageUser.php');
+                                exit;
                             }else {
                             echo "<div class='bg-red-200 text-white rounded-lg py-4 mt-5'>
                                         <p class='mx-5 font-bold'>The email or password is wrong!!!</p>
