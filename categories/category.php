@@ -6,10 +6,12 @@
 if (isset($_GET['cat_id'])) {
     $id = $_GET['cat_id'];
     $posts = $conn->query("SELECT posts.image AS image, posts.id AS id, posts.title AS title, posts.subtitle AS subtitle, 
-        posts.user_name AS user_name, posts.created_at AS created_at, 
-        posts.category_id AS category_id FROM categories 
-        JOIN posts ON categories.id = posts.category_id 
-        WHERE posts.category_id = '$id'");
+       posts.user_name AS user_name, posts.created_at AS created_at, 
+       posts.category_id AS category_id 
+FROM categories 
+JOIN posts ON categories.id = posts.category_id::integer 
+WHERE posts.category_id = '$id'
+");
     $posts->execute();
     $rows = $posts->fetchAll(PDO::FETCH_OBJ);
 } else {

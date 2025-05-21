@@ -13,6 +13,6 @@ if (isset($_GET['del_id'])) {
     $delete->execute([
         ':id' => $id
     ]);
-    header('Location: ../profileUser.php');
+    header('Location: ../pageUser.php');
 }
 ?>
