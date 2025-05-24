@@ -79,7 +79,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
                 sans-serif;
             "
         data-translate="a">
-        A good blog platform provides customization options, SEO tools, and the ability to monetize content.
+        A good blog platform provides customization options, SEO tools, and the ability to monetize content hi.
       </p>
 
     </div>
