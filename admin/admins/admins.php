@@ -15,7 +15,6 @@ if(!isset($_SESSION['adminname'])) {
 }
 
 
-
 // Prepare and execute query to fetch admins
 $admins = $conn->prepare("SELECT * FROM admins LIMIT 7");
 $admins->execute();
