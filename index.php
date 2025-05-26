@@ -81,8 +81,8 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
         data-translate="a">
         A good blog platform provides customization options, SEO tools, and the ability to monetize content.
       </p>
-      <p>Hi everyone</p>
 
+      
     </div>
   </section>
   <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-[100px] mx-6 md:mx-[120px] min-w-80 mt-[70px]">
@@ -92,7 +92,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
       <p class="mt-5 lead text-2xl" style="
               font-family: 
                 sans-serif;
-            ">Dive into a world of fresh ideas, expert tips, and inspiring stories.
+            " data-translate="d">Dive into a world of fresh ideas, expert tips, and inspiring stories.
         Our blog is your go-to space for insightful content</p>
       <button class="mt-5 rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="Explore">Explore Us</button>
     </div>
@@ -104,8 +104,8 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
   <section class="p-5 mt-5 bg-blue-900 my-6">
     <div class="mx-6 md:mx-[120px] my-6">
       <div class="m-7">
-        <h2 class="text-4xl text-white font-bold" data-aos="fade-down">For iBlog Services</h2>
-        <p class="mt-5 text-white text-2xl" data-aos="fade-left">Explore job opportunities.</p>
+        <h2 class="text-4xl text-white font-bold" data-aos="fade-down" data-translate="e">For iBlog Services</h2>
+        <p class="mt-5 text-white text-2xl" data-aos="fade-left" data-translate="f">Explore job opportunities.</p>
       </div>
       <div class="app my-4" data-aos="fade-right">
         <?php
@@ -118,7 +118,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
   </section>
 
 <section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
-  <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center" data-aos="fade-down">All Posts</h2>
+  <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center" data-aos="fade-down" data-translate="g" >All Posts</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-right">
     <?php foreach ($rows as $row): ?>
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
@@ -153,7 +153,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
 </section>
 
   <section class="px-6 py-8 bg-gradient-to-br from-blue-900 to-gray-100 shadow-lg transition-transform hover:scale-[1.02]" >
-    <h3 class="text-4xl font-bold text-white mb-[50px] text-center mt-5" data-aos="fade-down">Categories</h3>
+    <h3 class="text-4xl font-bold text-white mb-[50px] text-center mt-5" data-aos="fade-down" data-translate="h">Categories</h3>
     <?php foreach ($category as $cat) : ?>
       <div class="max-w-3xl mx-auto text-center mb-[50px]" data-aos="fade-left">
         <a href="./categories/category.php?cat_id=<?php echo $cat->id; ?>">

@@ -13,10 +13,16 @@ const translations = {
     description:
       "This is a sample page showcasing the navbar with language selection and dark mode functionality. The navbar is responsive and includes a mobile menu with working dropdowns.",
     // welcome: "welcome",
+    Explore:"Explore Us",
     a: 
       "A good blog platform provides customization options, SEO tools, and the ability to monetize content",
     b:
       "Make Your Blog Better",
+    d:"Dive into a world of fresh ideas, expert tips, and inspiring stories. Our blog is your go-to space for insightful content",
+    f:"Explore job opportunities.",
+    e:"For iBlog Services",
+    g:"All Posts",
+    h:"Categories"
   },
   km: {
     home: "ទំព័រដើម",
@@ -31,10 +37,16 @@ const translations = {
     description:
       "នេះគឺជាទំព័រគំរូដែលបង្ហាញពីរបារនាំផ្លូវជាមួយនឹងមុខងារជ្រើសរើសភាសា និងរបៀបងងឹត។ របារនាំផ្លូវមានលក្ខណៈឆ្លើយតបនិងរួមបញ្ចូលម៉ឺនុយចល័តជាមួយនឹងបញ្ជីទម្លាក់ចុះដែលដំណើរការ។",
     // welcome: "សូមស្វាគមន៍"
+    Explore:"រុករកពួកយើង",
     a: 
       "វេទិកាប្លក់ដ៏ល្អផ្តល់នូវជម្រើសប្ដូរតាមបំណង ឧបករណ៍ SEO និងសមត្ថភាពក្នុងការរកប្រាក់ពីមាតិកា។",
     b:
      "ធ្វើឱ្យប្លុករបស់អ្នកកាន់តែប្រសើរឡើង",
+    d:"ចូលទៅក្នុងពិភពនៃគំនិតថ្មីៗ គន្លឹះអ្នកជំនាញ និងរឿងដែលបំផុសគំនិត។ ប្លក់របស់យើងគឺជាកន្លែងទំនេររបស់អ្នកសម្រាប់មាតិកាដ៏ឈ្លាសវៃ",
+    e:"សម្រាប់សេវាកម្ម iBlog",
+    f:"ស្វែងរកឱកាសការងារ។",
+    g:"ប្រកាសទាំងអស់",
+    h:"ប្រភេទ"
   },
 };
 
