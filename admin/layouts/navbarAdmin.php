@@ -56,7 +56,7 @@
 <body class="bg-white dark:bg-blue-900 transition-colors duration-200 min-w-80">
 
   <!-- Sidebar -->
-  <aside
+  <!-- <aside
     class="fixed top-0 left-0 h-full w-64 bg-blue-900 dark:bg-gray-900 shadow-md z-40 hidden md:flex flex-col py-6 px-6">
     <nav class="flex flex-col space-y-6">
       <a href="#" class="nav-link text-white hover:text-yellow-500 font-semibold" data-translate="home">Home</a>
@@ -64,7 +64,7 @@
       <a href="../admin/categories-admins/create-category.php" class="nav-link text-white hover:text-yellow-500 font-semibold">Categories</a>
       <a href="./posts.php" class="nav-link text-white hover:text-yellow-500 font-semibold">Posts</a>
     </nav>
-  </aside>
+  </aside> -->
 
   <!-- Main content container with left margin for sidebar -->
   <div class="md:ml-64">
@@ -122,7 +122,7 @@
                 class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:hover:bg-yellow-500"
                 data-translate="profile">Profile</button>
             </a>
-            <a href="./auth/logout.php">
+            <a href="/">
               <button
                 class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-blue-900"
                 data-translate="log-out">Logout</button>

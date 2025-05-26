@@ -3,7 +3,7 @@
 
 <?php 
   // admins
-  $select_admins = $conn->query("SELECT COUNT(*) AS admins_number FROM admins");
+  $select_admins = $conn->query("SELECT COUNT(*) AS admins_number FROM users");
   $select_admins->execute();
   $admins = $select_admins->fetch(PDO::FETCH_OBJ);
 
@@ -114,17 +114,17 @@
 
 <div class="dashboard-layout">
   <!-- Sidebar -->
-  <div class="sidebar">
-    <h3>Admin Panel</h3>
-    <a href="#">Dashboard</a>
-    <a href="#">Posts</a>
-    <a href="#">Categories</a>
-    <a href="#">Admins</a>
-    <a href="#">Settings</a>
-  </div>
+  <aside class="w-64 h-screen bg-blue-900 text-white p-6 hidden md:block fixed top-0">
+    <nav class="space-y-4 mt-[100px]">
+      <a href="../adminProfile.php" class="block hover:text-yellow-500 font-semibold">🏠 Home</a>
+      <a href="admins/admins.php" class="block hover:text-yellow-500 font-semibold">👥 Users</a>
+      <a href="categories-admins/create-category.php" class="block hover:text-yellow-500 font-semibold">📁 Categories</a>
+      <a href="posts-admins/show-posts.php" class="block hover:text-yellow-500 font-semibold">📝 Posts</a>
+    </nav>
+  </aside>
 
   <!-- Main Content -->
-  <div class="main-content">
+  <div class="main-content ml-64">
     <div class="row dashboard-row justify-content-center">
       <div>
         <div class="card dashboard-card">
