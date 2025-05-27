@@ -1,6 +1,5 @@
 <?php 
 
-// Then require config and navbar
 require "../../config/config.php"; 
 require "../layouts/navbarAdmin.php"; 
 

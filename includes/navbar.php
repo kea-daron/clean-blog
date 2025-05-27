@@ -61,7 +61,7 @@
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
       <a href="../index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="assets/2222.png" class="h-[50px] w-[150px]" alt="iBlog Logo" />
+        <img src="https://deploy-logo-iblog-kzeqwy3fv-istad.vercel.app/2222.png" class="h-[50px] w-[150px]" alt="iBlog Logo" />
       </a>
 
       <!-- Desktop Nav -->
