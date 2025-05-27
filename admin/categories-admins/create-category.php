@@ -17,12 +17,13 @@ if (isset($_POST['submit'])) {
             $editId = $_POST['edit_id'];
             $update = $conn->prepare("UPDATE categories SET name = :name WHERE id = :id");
             $update->execute([':name' => $name, ':id' => $editId]);
+              echo "<script>alert('Category Update successfully!'); window.location.href='create-category.php';</script>";
         } else {
             // Insert new category
             $insert = $conn->prepare("INSERT INTO categories (name) VALUES (:name)");
             $insert->execute([':name' => $name]);
+              echo "<script>alert('Category create successfully!'); window.location.href='create-category.php';</script>";
         }
-        // header("Location: create-category.php");
         exit;
     }
 }
@@ -32,7 +33,7 @@ if (isset($_GET['delete'])) {
     $deleteId = $_GET['delete'];
     $delete = $conn->prepare("DELETE FROM categories WHERE id = :id");
     $delete->execute([':id' => $deleteId]);
-   // header("Location: create-category.php");
+     echo "<script>alert('Category deleted successfully!'); window.location.href='create-category.php';</script>";
     exit;
 }
 

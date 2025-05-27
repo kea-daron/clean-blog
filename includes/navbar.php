@@ -61,7 +61,7 @@
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
       <a href="../index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://deploy-logo-iblog-kzeqwy3fv-istad.vercel.app/2222.png" class="h-[50px] w-[150px]" alt="iBlog Logo" />
+        <img src="https://deploy-logo-iblog.vercel.app/2222.png" class="h-[50px] w-[150px]" alt="iBlog Logo" />
       </a>
 
       <!-- Desktop Nav -->
@@ -94,10 +94,10 @@
           </button>
 
           <!-- Auth Buttons -->
-          <a href="./auth/register.php">
+          <a href="../auth/register.php">
             <button class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:hover:bg-yellow-500" data-translate="register">Register</button>
           </a>
-          <a href="./auth/login.php">
+          <a href="../auth/login.php">
             <button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-blue-900" data-translate="log-in">Log in</button>
           </a>
         </div>

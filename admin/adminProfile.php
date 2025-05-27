@@ -114,7 +114,7 @@
 
 <div class="dashboard-layout">
   <!-- Sidebar -->
-  <aside class="w-64 h-screen bg-blue-900 text-white p-6 hidden md:block fixed top-0">
+  <aside class="w-64 h-screen bg-blue-900 text-white p-6 hidden md:block fixed top-0 ">
     <nav class="space-y-4 mt-[100px]">
       <a href="../adminProfile.php" class="block hover:text-yellow-500 font-semibold">🏠 Home</a>
       <a href="admins/admins.php" class="block hover:text-yellow-500 font-semibold">👥 Users</a>
@@ -147,7 +147,7 @@
       <div>
         <div class="card dashboard-card">
           <div class="card-body">
-            <h5 class="card-title">Admins</h5>
+            <h5 class="card-title">Users</h5>
             <p class="card-text">Number of admins: <?php echo $admins->admins_number; ?></p>
           </div>
         </div>
