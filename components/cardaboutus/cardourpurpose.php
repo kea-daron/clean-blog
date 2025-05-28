@@ -9,7 +9,7 @@
 <body class="bg-blue-900 text-gray-800">
   <div class="bg-blue-900 py-16">
     <section class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-extrabold text-center mb-16 text-white tracking-tight">Our Purpose</h2>
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-white tracking-tight" data-translate="n">Our Purpose</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- Card 1 -->
@@ -21,8 +21,8 @@
               <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-blue-900">Write and Post Blogs</h3>
-          <p class="text-gray-600">Users can easily create and publish engaging blog content with minimal effort.</p>
+          <h3 class="text-xl font-semibold mb-2 text-blue-900" data-translate="o">Write and Post Blogs</h3>
+          <p class="text-gray-600" data-translate="p">Users can easily create and publish engaging blog content with minimal effort.</p>
         </div>
 
         <!-- Card 2 -->
@@ -34,8 +34,8 @@
               <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-blue-900">Clean Interface</h3>
-          <p class="text-gray-600">A simple and distraction-free design ensures better readability and writing focus.</p>
+          <h3 class="text-xl font-semibold mb-2 text-blue-900" data-translate="q">Clean Interface</h3>
+          <p class="text-gray-600" data-translate="r">A simple and distraction-free design ensures better readability and writing focus.</p>
         </div>
 
         <!-- Card 3 -->
@@ -46,8 +46,8 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-blue-900">Manage Content</h3>
-          <p class="text-gray-600">Users can update, delete, and organize posts for full content control.</p>
+          <h3 class="text-xl font-semibold mb-2 text-blue-900" data-translate="s">Manage Content</h3>
+          <p class="text-gray-600" data-translate="t">Users can update, delete, and organize posts for full content control.</p>
         </div>
       </div>
     </section>

@@ -144,7 +144,7 @@
 <body>
     <section class="team-section">
         <div class="container">
-            <h1 class="section-title mb-[150px]  dark:text-white">Our Team</h1>
+            <h1 class="section-title mb-[150px]  dark:text-white" data-translate="ac">Our Team</h1>
 
             <div class="team-grid mt-[100px]">
                 <?php
@@ -162,25 +162,25 @@
                     // ],
                     [
                         'name' => 'Chhun Meyling',
-                        'role' => 'Lead Web',
-                        'image' => '../assets/ling.jpg',
+                        'role' => 'Slide Maker',
+                        'image' => '../assets/Meyling.jpg',
                         'telegram' => 'https://t.me/chhun_meyling',
                         'facebook' => 'https://www.facebook.com/share/17W1QCwFkA/?mibextid=wwXIfr',
                         'github' => 'https://github.com/ChhunMeyling',
                         'accent' => 'blue'
                     ],
                     [
-                        'name' => 'An Hengheng',
-                        'role' => 'Presentation',
-                        'image' => '../assets/heng.jpg',
-                        'telegram' => 'https://t.me/henghengan',
-                        'facebook' => 'https://www.facebook.com/share/16JWwneUWX/',
-                        'github' => 'https://www.facebook.com/share/16JWwneUWX/',
+                        'name' => 'Oem Sreypich',
+                        'role' => 'Document Maker',
+                        'image' => '../assets/pich.jpg',
+                        'telegram' => 'https://t.me/pichoem06',
+                        'facebook' => 'https://www.facebook.com/ahpiichOun',
+                        'github' => 'https://www.facebook.com/ahpiichOun',
                         'accent' => 'blue'
                     ],
                     [
                         'name' => 'Khoeun Khema',
-                        'role' => 'Presentation',
+                        'role' => 'Presenter',
                         'image' => '../assets/khema.jpg',
                         'telegram' => 'https://t.me/Khoeun_khema',
                         'facebook' => 'https://www.facebook.com/share/165vZaRoHV/?mibextid=wwXIfr',
@@ -189,7 +189,7 @@
                     ],
                     [
                         'name' => 'Chheoun SreySokny',
-                        'role' => 'Presentation',
+                        'role' => 'Presenter',
                         'image' => '../assets/sokny.jpg',
                         'telegram' => 'https://t.me/CHHEOUNSOKNY',
                         'facebook' => 'https://www.facebook.com/share/1BTV1Heo4h/',
@@ -198,7 +198,7 @@
                     ],
                     [
                         'name' => 'Rin Ormara',
-                        'role' => 'Presentation',
+                        'role' => 'Presenter',
                         'image' => '../assets/ormara.jpg',
                         'telegram' => 'https://t.me/RinOrmara',
                         'facebook' => 'https://web.facebook.com/4maraz.R',
@@ -207,16 +207,25 @@
                     ],
                     [
                         'name' => 'Sam Ratha',
-                        'role' => 'Presentation',
+                        'role' => 'Presenter',
                         'image' => '../assets/ratha.jpg',
                         'telegram' => 'https://t.me/ratha_sam9',
                         'facebook' => 'https://www.facebook.com/sam.ratha.3950',
                         'github' => 'https://www.facebook.com/sam.ratha.3950',
                         'accent' => 'blue'
+                    ], 
+                    [
+                        'name' => 'An Hengheng',
+                        'role' => 'Presenter',
+                        'image' => '../assets/heng.jpg',
+                        'telegram' => 'https://t.me/henghengan',
+                        'facebook' => 'https://www.facebook.com/share/16JWwneUWX/',
+                        'github' => 'https://www.facebook.com/share/16JWwneUWX/',
+                        'accent' => 'blue'
                     ],
                     [
                         'name' => 'Mao Ineang',
-                        'role' => 'Presentation',
+                        'role' => 'Presenter',
                         'image' => '../assets/neang.jpg',
                         'telegram' => 'https://t.me/Mao_Ineang',
                         'facebook' => 'https://www.facebook.com/share/16UKnN7Nq5/?mibextid=LQQJ4d',
@@ -224,17 +233,8 @@
                         'accent' => 'blue'
                     ],
                     [
-                        'name' => 'Oem Sreypich',
-                        'role' => 'Presentation',
-                        'image' => '../assets/pich.jpg',
-                        'telegram' => 'https://t.me/pichoem06',
-                        'facebook' => 'https://www.facebook.com/ahpiichOun',
-                        'github' => 'https://www.facebook.com/ahpiichOun',
-                        'accent' => 'blue'
-                    ],
-                    [
                         'name' => 'Kim Sivdara',
-                        'role' => 'Presentation',
+                        'role' => 'Presenter',
                         'image' => '../assets/dara.jpg',
                         'telegram' => 'https://t.me/zerm_4Twenty',
                         'facebook' => 'https://www.facebook.com/share/15UvjLKZAT/?mibextid=wwXIfr',

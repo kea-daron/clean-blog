@@ -121,7 +121,7 @@
 ?>
 <div class="contact-container">
   <div class="contact-info">
-    <h2 class="contact-heading">Contact Us</h2>
+    <h2 class="contact-heading" data-translate="ai">Contact Us</h2>
 
     <div class="contact-item">
       <div class="contact-icon">

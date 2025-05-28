@@ -115,7 +115,7 @@
 <body>
     <div class="container">
         <div class="heading">
-            <h2 class="dark:text-white">Achievement</h2>
+            <h2 class="dark:text-white" data-translate="ad">Achievement</h2>
             
         </div>
         
@@ -129,7 +129,7 @@
                     </svg>
                 </div>
                 <h3 class="stat-number">899</h3>
-                <p class="stat-label">Total Post</p>
+                <p class="stat-label" data-translate="ae">Total Posts</p>
             </div>
             
             <!-- Seekers -->
@@ -143,7 +143,7 @@
                     </svg>
                 </div>
                 <h3 class="stat-number">16.8k</h3>
-                <p class="stat-label">Blogger</p>
+                <p class="stat-label" data-translate="af">Blogger</p>
             </div>
             
             <!-- Companies -->
@@ -155,7 +155,7 @@
                     </svg>
                 </div>
                 <h3 class="stat-number">261</h3>
-                <p class="stat-label">Companies</p>
+                <p class="stat-label" data-translate="ag">Companies</p>
             </div>
             
             <!-- Employers -->
@@ -167,7 +167,7 @@
                     </svg>
                 </div>
                 <h3 class="stat-number">378</h3>
-                <p class="stat-label">Users</p>
+                <p class="stat-label" data-translate="ah">Users</p>
             </div>
         </div>
     </div>

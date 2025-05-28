@@ -218,8 +218,8 @@
     <section class="bg-blue-900">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-col-3 mx-6 md:mx-[120px] min-w-80 ">
             <div class="mt-[100px]">
-                <h2 class="text-5xl font-bold text-yellow-500 dark:text-yellow-500">About Us</h2>
-                <p class="text-5xl font-bold text-white dark:text-primary-50 ">Codecam website warmly <span>welcomes all developers</span></p>
+                <h2 class="text-5xl font-bold text-yellow-500 dark:text-yellow-500" data-translate="i">About Us</h2>
+                <p class="text-5xl font-bold text-white dark:text-primary-50" data-translate="j">iBlog website warmly <span>welcomes all developers</span></p>
             </div>
             <div>
             <img src="../assets/about.svg" class="h-[500px] w-[500px]" alt="image writing">
@@ -233,12 +233,12 @@
             <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-100"></div>
             <div class="md:w-2/5 mt-[50px] mb-[50px]">
                 <h2 class="text-5xl font-bold leading-tight mb-5">
-                    <span class="text-yellow-400">WHO</span> <span class="text-[#0e284c]">WE ARE</span>
+                    <span class="text-yellow-400" data-translate="k">WHO</span> <span class="text-[#0e284c]" data-translate="l">WE ARE</span>
                 </h2>
             </div>
             <div class="relative md:w-3/5 text-[#0e284c] text-xl md:pl-8 mt-[50px] mb-[50px]">
                 <div class="hidden md:block absolute left-0 top-0 bottom-0 w-1 bg-yellow-400 rounded"></div>
-                <div class="space-y-4">
+                <div class="space-y-4" data-translate="m">
                     <p>
                     We are students from RUPP <br/>
                     Institute who have collaborated to turn our Project

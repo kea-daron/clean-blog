@@ -7,7 +7,7 @@
 </head>
 <body>
     <section class="py-14 px-4">
-        <h2 class="text-center text-5xl text-heading-1 font-bold text-primary-50 mb-14">
+        <h2 class="text-center text-5xl text-heading-1 font-bold text-primary-50 mb-14" data-translate="u">
             Our Mentor
         </h2>
         <div class="mx-auto max-w-7xl bg-gray-100 rounded-xl p-6">
@@ -27,7 +27,7 @@
             <!-- Info Section -->
             <div class="text-center flex-1" data-aos="fade-left">
               <h3 class="text-2xl font-bold text-yellow-500">
-                Teacher : <span class="text-blue-900 text-2xl font-bold">Meas Sovann</span>
+                <span class="text-2xl font-bold text-yellow-500" data-translate="v">Teacher</span> : <span class="text-blue-900 text-2xl font-bold" data-translate="w">Meas Sovann</span>
               </h3>
               <p class="text-gray-800 text-des-2 mt-1">
                 Front-End Web Dev,
@@ -35,7 +35,7 @@
               <p class="text-gray-800 text-des-2">at RUPP</p>
 
               <button
-                class="mt-4 bg-white border-1 border-gray-900 text-black text-des-2 w-full py-2 rounded-lg"
+                class="mt-4 bg-white border-1 border-gray-900 text-black text-des-2 w-full py-2 rounded-lg" data-translate="x"
               >
                 More information
               </button>

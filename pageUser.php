@@ -19,19 +19,19 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
       <img src="./assets/userpage.svg" class="h-[600px] w-[600px]" alt="image writing">
     </div>
     <div>
-      <h2 class="text-5xl font-bold text-yellow-500 dark:text-yellow-500 mt-[100px]">iBlog</h2><br>
-      <p class="text-4xl font-bold text-primary-50 dark:text-white">Clean Design. Clear Message</p>
+      <h2 class="text-5xl font-bold text-yellow-500 dark:text-yellow-500 mt-[100px]" data-translate="aj">iBlog</h2><br>
+      <p class="text-4xl font-bold text-primary-50 dark:text-white" data-translate="ak">Clean Design. Clear Message</p>
       <p class="mt-5 lead text-2xl dark:text-white" style="
               font-family: 
                 sans-serif;
-            ">Designed for clarity, written with heart—this is a space where every idea has room to breathe.</p>
-      <a href="./pages/create.php"><button class="mt-5 rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" >Create Now</button></a>
+            " data-translate="al">iBlog is built for creators, thinkers, and storytellers. Whether you're writing your first post or leading a movement — we’ve got you covered.</p>
+      <a href="./pages/create.php"><button class="mt-5 rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="am">Create Now</button></a>
     </div>
     
   </section>
 
   <section class="mx-6 md:mx-[120px] my-6 bg-whitesmoke dark:bg-black dark:text-white p-5">
-    <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center">All Posts</h2>
+    <h2 class="mb-[80px] mt-[60px] dark:text-white text-4xl font-bold text-primary-50 text-center" data-translate="an">All Posts</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <?php foreach ($rows as $row): ?>
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
@@ -66,7 +66,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
   </section>
 
   <section class="px-6 py-8 bg-gradient-to-br from-blue-900 to-gray-100 shadow-lg transition-transform hover:scale-[1.02]">
-    <h3 class="text-4xl font-bold text-white mb-[50px] text-center ">Categories</h3>
+    <h3 class="text-4xl font-bold text-white mb-[50px] text-center " data-translate="ao">Categories</h3>
     <?php foreach ($category as $cat) : ?>
       <div class="max-w-3xl mx-auto text-center mb-[50px]">
         <a href="./categories/category.php?cat_id=<?php echo $cat->id; ?>">

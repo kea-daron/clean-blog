@@ -26,25 +26,25 @@
 
         <!-- Gradient Button -->
         <div class="mt-6">
-          <button class="rounded-full bg-gradient-to-r from-yellow-400 to-teal-400 px-8 py-2 text-white shadow-md transition-transform hover:scale-105">
+          <button class="rounded-full bg-gradient-to-r from-yellow-400 to-teal-400 px-8 py-2 text-white shadow-md transition-transform hover:scale-105" data-translate="y">
             Leader
           </button>
         </div>
 
         <!-- Name -->
         <h1 class="mt-6 text-center text-3xl font-bold md:text-4xl">
-          <span class="text-yellow-500">Kea</span> <span class="text-yellow-600">Daron</span>
+          <span class="text-yellow-500" data-translate="z">Kea</span> <span class="text-yellow-600" data-translate="ab">Daron</span>
           <!-- <span class="text-teal-500">ron</span> -->
         </h1>
 
         <!-- Role -->
-        <p class="mt-2 text-center text-lg text-gray-600">Coding</p>
+        <p class="mt-2 text-center text-lg text-gray-600" data-translate="aa">Coder</p>
 
         <!-- Underline -->
         <div class="mt-2 h-1 w-16 bg-gradient-to-r from-yellow-400 to-teal-400"></div>
 
         <!-- Social Icons -->
-        <div class="mt-6 flex space-x-4 ">
+        <div class="mt-6 flex space-x-4 " >
           <a 
             href="https://t.me/kea_daron" 
             class="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-blue-900 transition-colors hover:bg-gray-100"
