@@ -207,8 +207,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/languages.js"></script>
-  <script src="js/dark.js"></script>
+  <script src="../js/languages.js"></script>
+  <script src="../js/dark.js"></script>
 
   <!-- Mobile Menu Toggle Script -->
   <script>

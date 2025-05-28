@@ -10,7 +10,7 @@ $rows = $admins->fetchAll(PDO::FETCH_OBJ);
 $delete = $conn->prepare("DELETE FROM users WHERE id = :id");
 if (isset($_GET['id'])) {
     $delete->execute([':id' => $_GET['id']]);
-    echo "<script>alert('Admin deleted successfully!'); window.location.href='admins.php';</script>";
+    echo "<script>alert('User deleted successfully!'); window.location.href='admins.php';</script>";
 }
 ?>
 
@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
        <div class="p-6">
   <div class="bg-white shadow-xl rounded-2xl overflow-hidden">
     <div class="flex items-center justify-between px-6 py-4 border-b">
-      <h2 class="text-2xl font-bold text-blue-700">👑 Admins List</h2>
+      <h2 class="text-2xl font-bold text-blue-700">👑 Users List</h2>
     </div>
     
     <div class="overflow-x-auto">
@@ -50,7 +50,7 @@ if (isset($_GET['id'])) {
             <td class="px-6 py-4"><?php echo htmlspecialchars($row->email); ?></td>
             <td class="px-6 py-4 space-x-2">
               <a href="admins.php?id=<?php echo $row->id; ?>"
-                onclick="return confirm('Delete this admin?');"
+                onclick="return confirm('Delete this user?');"
                 class="inline-block bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-xs font-medium transition">
                 Delete
                 </a>

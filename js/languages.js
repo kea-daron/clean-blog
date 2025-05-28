@@ -55,7 +55,17 @@ const translations = {
     al:"iBlog is built for creators, thinkers, and storytellers. Whether you're writing your first post or leading a movement — we’ve got you covered.",
     am:"Create Now",
     an:"All Posts",
-    ao:"Categories"
+    ao:"Categories",
+    ba:"🏠 Home",
+    bb:"👥 Users",
+    bc:"📁 Categories",
+    bd:"📝 Posts",
+    ca:"📝 Posts",
+    // cb:"Number of posts: ",
+    cc:"📁 Categories",
+    // cd:"Number of categories: ",
+    ce:"👥 Users"
+    // cf:"Number of admin: "
   },
   km: {
     home: "ទំព័រដើម",
@@ -112,7 +122,17 @@ const translations = {
     al:"iBlog ត្រូវបានបង្កើតឡើងសម្រាប់អ្នកបង្កើត អ្នកគិត និងអ្នកនិទានរឿង។ មិនថាអ្នកកំពុងសរសេរអត្ថបទដំបូងរបស់អ្នក ឬដឹកនាំចលនាទេ ពួកយើងបានជួយអ្នកហើយ។",
     am:"បង្កើតឥឡូវនេះ",
     an:"មាតិកាទាំងអស់",
-    ao:"ប្រភេទនៃមាតិកា"
+    ao:"ប្រភេទនៃមាតិកា",
+    ba:"🏠 ទំព័រដើម",
+    bb:"👥 អ្នកប្រើប្រាស់",
+    bc:"📁 ប្រភេទនៃមាតិកា",
+    bd:"📝 មាតិកាទាំងអស់",
+    ca:"📝 មាតិកាទាំងអស់",
+    // cb:"ចំនួននៃមាតិកា",
+    cc:"📁 ប្រភេទនៃមាតិកា",
+    // cd:"ចំនួននៃប្រភេទមាតិកា",
+    ce:"👥 អ្នកប្រើប្រាស់"
+    // cf:"ចំនួននៃអ្នកប្រើប្រាស់"
   },
 };
 

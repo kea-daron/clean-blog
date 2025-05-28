@@ -112,14 +112,14 @@
   }
 </style>
 
-<div class="dashboard-layout">
+<div class="dashboard-layout dark:bg-black">
   <!-- Sidebar -->
   <aside class="w-64 h-screen bg-blue-900 text-white p-6 hidden md:block fixed top-0 ">
     <nav class="space-y-4 mt-[100px]">
-      <a href="../adminProfile.php" class="block hover:text-yellow-500 font-semibold">🏠 Home</a>
-      <a href="admins/admins.php" class="block hover:text-yellow-500 font-semibold">👥 Users</a>
-      <a href="categories-admins/create-category.php" class="block hover:text-yellow-500 font-semibold">📁 Categories</a>
-      <a href="posts-admins/show-posts.php" class="block hover:text-yellow-500 font-semibold">📝 Posts</a>
+      <a href="../adminProfile.php" class="block hover:text-yellow-500 font-semibold" data-translate="ba">🏠 Home</a>
+      <a href="admins/admins.php" class="block hover:text-yellow-500 font-semibold" data-translate="bb">👥 Users</a>
+      <a href="categories-admins/create-category.php" class="block hover:text-yellow-500 font-semibold" data-translate="bc">📁 Categories</a>
+      <a href="posts-admins/show-posts.php" class="block hover:text-yellow-500 font-semibold" data-translate="bd">📝 Posts</a>
     </nav>
   </aside>
 
@@ -129,8 +129,8 @@
       <div>
         <div class="card dashboard-card">
           <div class="card-body">
-            <h5 class="card-title">Posts</h5>
-            <p class="card-text">Number of posts: <?php echo $posts->posts_number; ?></p>
+            <h5 class="card-title" data-translate="ca">Posts</h5>
+            <p class="card-text" data-translate="cb">Number of posts: <?php echo $posts->posts_number; ?></p>
           </div>
         </div>
       </div>
@@ -138,8 +138,8 @@
       <div>
         <div class="card dashboard-card">
           <div class="card-body">
-            <h5 class="card-title">Categories</h5>
-            <p class="card-text">Number of categories: <?php echo $categories->categories_number; ?></p>
+            <h5 class="card-title" data-translate="cc">Categories</h5>
+            <p class="card-text" data-translate="cd">Number of categories: <?php echo $categories->categories_number; ?></p>
           </div>
         </div>
       </div>
@@ -147,8 +147,8 @@
       <div>
         <div class="card dashboard-card">
           <div class="card-body">
-            <h5 class="card-title">Users</h5>
-            <p class="card-text">Number of admins: <?php echo $admins->admins_number; ?></p>
+            <h5 class="card-title" data-translate="ce">Users</h5>
+            <p class="card-text" data-translate="cf">Number of admins: <?php echo $admins->admins_number; ?></p>
           </div>
         </div>
       </div>
