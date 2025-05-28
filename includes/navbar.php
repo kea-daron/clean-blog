@@ -60,7 +60,7 @@
   <header class="sticky top-0 z-50 w-full border-b bg-blue-900 dark:bg-blue-900 dark:border-gray-700 transition-colors duration-200">
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
-      <a href="../index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://deploy-logo-iblog.vercel.app/2222.png" class="h-[50px] w-[150px]" alt="iBlog Logo" />
       </a>
 
@@ -164,8 +164,8 @@
   </header>
 
   <!-- Scripts -->
-  <script src="js/languages.js"></script>
-  <script src="js/dark.js"></script>
+  <script src="../js/languages.js"></script>
+  <script src="../js/dark.js"></script>
 
   <!-- Mobile Menu Toggle Script -->
   <script>

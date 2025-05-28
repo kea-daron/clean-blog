@@ -142,4 +142,4 @@ if (isset($_POST['submit'])) {
   });
 </script>
 
-<?php require "../includes/footer.php"; ?>
+<?php require "../includes/footerUser.php"; ?>

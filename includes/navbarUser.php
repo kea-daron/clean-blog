@@ -60,7 +60,7 @@
   <header class="sticky top-0 z-50 w-full border-b bg-blue-900 dark:bg-blue-900 dark:border-gray-700 transition-colors duration-200">
     <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
       <!-- Logo -->
-      <a href="../index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="../pageUser.php" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://deploy-logo-iblog.vercel.app/2222.png" class="h-[50px] w-[150px]" alt="iBlog Logo" />
       </a>
 
@@ -94,10 +94,10 @@
           </button>
 
           <!-- Auth Buttons -->
-          <a href="./pages/userProfile.php">
+          <a href="../pages/userProfile.php">
             <button class="rounded-md font-semibold text-white px-4 py-1.5 bg-blue-900 border-2 border-primary-100 hover:bg-primary-100 hover:text-primary-50 dark:bg-blue-900 dark:hover:bg-yellow-500" data-translate="profile">Profile</button>
           </a>
-          <a href="./auth/logout.php">
+          <a href="../auth/logout.php">
             <button class="rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-white border-2 border-primary-100 hover:bg-blue-900 dark:bg-yellow-500 dark:hover:bg-blue-900" data-translate="log-out">Logout</button>
           </a>
         </div>
@@ -164,8 +164,8 @@
   </header>
 
   <!-- Scripts -->
-  <script src="js/languages.js"></script>
-  <script src="js/dark.js"></script>
+  <script src="../js/languages.js"></script>
+  <script src="../js/dark.js"></script>
 
   <!-- Mobile Menu Toggle Script -->
   <script>

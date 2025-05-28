@@ -25,7 +25,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
               font-family: 
                 sans-serif;
             ">Designed for clarity, written with heart—this is a space where every idea has room to breathe.</p>
-      <a href="./pages/create.php"><button class="mt-5 rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" data-translate="Explore">Create Now</button></a>
+      <a href="./pages/create.php"><button class="mt-5 rounded-md font-semibold bg-primary-100 px-4 py-1.5 text-primary-50 border-2 border-primary-100 hover:bg-white dark:bg-primary-50 dark:hover:bg-gray-900 dark:text-white" >Create Now</button></a>
     </div>
     
   </section>
@@ -80,4 +80,4 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
 </section>
 
 
-<?php require "includes/footer.php"; ?>
+<?php require "includes/footerUser.php"; ?>
