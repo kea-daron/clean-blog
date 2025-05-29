@@ -16,6 +16,58 @@ $categories->execute();
 $category = $categories->fetchAll(PDO::FETCH_OBJ);
 ?>
 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Restoran - Delicious Dining Experience</title>
+    <meta name="title" content="Restoran - Delicious Dining Experience" />
+    <meta
+      name="description"
+      content="Enjoy the finest cuisine in town at Restoran. We offer mouth-watering dishes, cozy ambiance, and top-notch service." />
+    <meta
+      name="keywords"
+      content="restaurant, fine dining, food, cuisine, dinner, lunch, Restoran" />
+    <meta name="author" content="Your Name or Team" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta
+      property="og:title"
+      content="Restoran - Delicious Dining Experience" />
+    <meta
+      property="og:description"
+      content="Enjoy the finest cuisine in town at Restoran. We offer mouth-watering dishes, cozy ambiance, and top-notch service." />
+    <meta
+      property="og:image"
+      content="https://www.netkurumsal.com/wp-content/uploads/2017/10/restoran-1024x559.jpg" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourdomain.com/" />
+    <meta
+      property="twitter:title"
+      content="Restoran - Delicious Dining Experience" />
+    <meta
+      property="twitter:description"
+      content="Enjoy the finest cuisine in town at Restoran. We offer mouth-watering dishes, cozy ambiance, and top-notch service." />
+    <meta
+      property="twitter:image"
+      content="https://www.netkurumsal.com/wp-content/uploads/2017/10/restoran-1024x559.jpg" />
+
+    <link rel="icon" href="./images/RestronLogo.png" />
+
+    <link rel="stylesheet" href="/src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
 <link rel="stylesheet" href="./css/style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
