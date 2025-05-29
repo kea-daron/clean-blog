@@ -16,6 +16,23 @@ $categories->execute();
 $category = $categories->fetchAll(PDO::FETCH_OBJ);
 ?>
 
+<head>
+  <meta charset="UTF-8">
+  <title>iBlog</title>
+  <meta name="description" content="iBlog — Make Your Blog Better">
+
+  <!-- OG + Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iblog-bkgj.onrender.com/">
+  <meta property="og:title" content="iBlog">
+  <meta property="og:description" content="iBlog — Make Your Blog Better">
+  <meta property="og:image" content="https://i.ibb.co/hVR7ydY/blog-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://iblog-bkgj.onrender.com/">
+  <meta name="twitter:title" content="iBlog">
+  <meta name="twitter:description" content="iBlog — Make Your Blog Better">
+  <meta name="twitter:image" content="https://i.ibb.co/hVR7ydY/blog-preview.jpg">
+</head>
 
 
 <link rel="stylesheet" href="./css/style.css" />
