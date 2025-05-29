@@ -16,28 +16,7 @@ $categories->execute();
 $category = $categories->fetchAll(PDO::FETCH_OBJ);
 ?>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>iBlog</title>
-  <meta name="title" content="iBlog">
-  <meta name="description" content="iBlog — Make Your Blog Better">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://iblog-bkgj.onrender.com/">
-  <meta property="og:title" content="iBlog">
-  <meta property="og:description" content="iBlog — Make Your Blog Better">
-  <meta property="og:image" content="https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&w=0&k=20&c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://iblog-bkgj.onrender.com/">
-  <meta name="twitter:title" content="iBlog">
-  <meta name="twitter:description" content="iBlog — Make Your Blog Better">
-  <meta name="twitter:image" content="https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&w=0&k=20&c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=">
-</head>
 
 <link rel="stylesheet" href="./css/style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
