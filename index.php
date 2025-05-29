@@ -16,41 +16,26 @@ $categories->execute();
 $category = $categories->fetchAll(PDO::FETCH_OBJ);
 ?>
 
+<head>
+  <!-- Primary Meta Tags -->
+<title>iBlog</title>
+<meta name="title" content="iBlog">
+<meta name="description" content="iBlog — Make Your Blog Better">
 
- <head>
-  <!-- Character Encoding -->
-  <meta charset="UTF-8" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iblog-bkgj.onrender.com/">
+<meta property="og:title" content="iBlog">
+<meta property="og:description" content="iBlog — Make Your Blog Better">
+<meta property="og:image" content="https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&w=0&k=20&c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=">
 
-  <!-- Responsive Design -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://iblog-bkgj.onrender.com/">
+<meta property="twitter:title" content="iBlog">
+<meta property="twitter:description" content="iBlog — Make Your Blog Better">
+<meta property="twitter:image" content="https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&w=0&k=20&c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=">
 
-  <!-- Page Title -->
-  <title>Restoran - Delicious Dining Experience</title>
-  <meta name="title" content="Restoran - Delicious Dining Experience" />
-  <meta name="description" content="Enjoy the finest cuisine in town at Restoran. We offer mouth-watering dishes, cozy ambiance, and top-notch service." />
-  <meta name="keywords" content="restaurant, fine dining, food, cuisine, dinner, lunch, Restoran" />
-  <meta name="author" content="Your Name or Team" />
-
-  <!-- SEO Enhancements -->
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://yourdomain.com/" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:title" content="Restoran - Delicious Dining Experience" />
-  <meta property="og:description" content="Enjoy the finest cuisine in town at Restoran. We offer mouth-watering dishes, cozy ambiance, and top-notch service." />
-  <meta property="og:image" content="https://www.netkurumsal.com/wp-content/uploads/2017/10/restoran-1024x559.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://yourdomain.com/" />
-  <meta name="twitter:title" content="Restoran - Delicious Dining Experience" />
-  <meta name="twitter:description" content="Enjoy the finest cuisine in town at Restoran. We offer mouth-watering dishes, cozy ambiance, and top-notch service." />
-  <meta name="twitter:image" content="https://www.netkurumsal.com/wp-content/uploads/2017/10/restoran-1024x559.jpg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="./assets/2222.png" type="image/png" />
 </head>
 
 
