@@ -255,9 +255,6 @@
         <?php require "../components/cardaboutus/cardourpurpose.php"; ?>
     </section>
     <section class="mt-10 my-5 m-6 md:mx-[120px]">
-        <?php require "../components/cardaboutus/mentor.php"; ?>
-    </section>
-    <section class="mt-10 my-5 m-6 md:mx-[120px]">
         <?php require "../components/cardaboutus/leader.php"; ?>
     </section>
     <section class=" my-5 m-6 md:mx-[120px]">

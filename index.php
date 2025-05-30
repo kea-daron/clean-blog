@@ -187,7 +187,7 @@ $category = $categories->fetchAll(PDO::FETCH_OBJ);
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   const options = {
-    strings: ["T-Meas Sovann", "iBlog", "Group 1", "RUPP Students"],
+    strings: ["iBlog", "Group 1", "RUPP Students"],
     typeSpeed: 200,
     backSpeed: 200,
     loop: true,
